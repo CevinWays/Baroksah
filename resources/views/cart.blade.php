@@ -3,13 +3,31 @@
 <div class="clearfix"></div>
 <!-- Sub Header -->
 <div class="container">
+    <div class="row">
+        @if (session()->has('success_message'))
+        <div class="alert alert-success">
+            {{ session()->get('success_message') }}
+        </div>
+        @endif 
+        @if(count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>2
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+    </div>
+</div>
+<div class="container">
     <div class="col-12">
         <h2>Cart</h2>
         <nav class="text-right" aria-label="breadcrumb" role="navigation">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Cart</li>
-        </ol>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cart</li>
+            </ol>
         </nav>
     </div>
 </div>
@@ -17,29 +35,123 @@
 <div class="clearfix"></div>
 <div class="section-md">
     <div class="container">
-        <h4>2 item(s) di keranjang anda</h4>
-        <div class="card">
+        @if (Cart::count() > 0)
+        <h4>({{ Cart::count() }}) item di keranjang anda</h4>
+        @foreach (Cart::content() as $item)
+            <div class="card pad-20">
             <div class="card-body">
-                <div class="row pad-20">
-                    <div class="col-12 m-bot-5">
+                <div class="row">
+                    <div class="col-12">
                         <div class="col-md-2">
-                            <img src="images/reksadana1.jpg" class="img-responsive" alt=""> </div>
-                            <div class="col-md-6">
-                                <p>Lorem Ipsum passages more recently with desktop publishing software including versions
-                                    of Lorem Ipsum generators on the Internet.</p>
-                            </div>
-                        <div class="col-md-4 text-right">
-                            <a href="#"><span class="fa fa-lg fa-close"></span></a>
+                            <a href="{{ route('shop.show', $item->model->slug) }}"><img src="{{asset('images/products/'.$item->model->slug.'.png')}}" alt="item" class="cart-table-img">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>{{ $item->model->name }}</h4>
+                            <p>YTD : {{ $item->model->ytd }}</p>
+                            <h4>{{ $item->model->presentPrice() }}</h4>
+                        </div>
+                            </a>
+                        <div class="col-md-2">
+                            <form action="{{ route('cart.switchToSaveForLater', $item->rowId) }}" method="POST">
+                                {{ csrf_field() }}
+
+                                <button type="submit" class="btn btn-success">Save for later</button>
+                            </form>
+                        </div>
+                        <div class="col-md-2 text-right">
+                            <form action="{{ route('cart.destroy', $item->rowId) }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button type="submit" class="btn btn-danger"><span class="fa fa-lg fa-close"></span></button>
+                            </form>
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row pad-20">
-            <div class="col-12 m-bot-5">
-                <button type="button" class="btn btn-rounded btn-secondary">Checkout</button>
+            @endforeach
+            <div class="row pad-20">
+                <div class="card">
+
+                
+                <div class="col-md-6">
+                    <table class="f-20">
+                        <tbody>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>:</td>
+                                <td>{{presentPrice(Cart::subtotal())}}</td>
+                            </tr>
+                            <tr>
+                                <td>Tax (Pajak 13%)</td>
+                                <td>:</td>
+                                <td>{{presentPrice(Cart::tax())}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td>:</td>
+                                <td>{{presentPrice(Cart::total())}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                </div>
             </div>
+            
+            <div class="row pad-20">
+                <div class="col-12 m-bot-5">
+                    <button type="button" class="btn btn-rounded btn-secondary">Checkout</button>
+                    <a href="{{route('shop.index')}}" class="btn btn-rounded btn-primary">Lanjut Belanja</a>
+                </div>
+            </div>
+            @else
+            <div class="row pad-20 text-center">
+                <h1>Tidak ada item di Cart!</h1>
+                <a href="{{route('shop.index')}}" class="btn btn-rounded btn-primary">Lanjut Belanja</a>
+            </div>
+            @endif
+
+            @if (Cart::instance('saveForLater')->count() > 0)
+                <h4>({{ Cart::instance('saveForLater')->count() }}) item di Save Later</h4>
+                @foreach (Cart::instance('saveForLater')->content() as $item)
+                    <div class="card pad-20">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="col-md-2">
+                                    <a href="{{ route('shop.show', $item->model->slug) }}"><img src="{{asset('images/products/'.$item->model->slug.'.png')}}" alt="item" class="cart-table-img">
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>{{ $item->model->name }}</h4>
+                                    <p>YTD : {{ $item->model->ytd }}</p>
+                                    <h4>{{ $item->model->presentPrice() }}</h4>
+                                </div>
+                                    </a>
+                                <div class="col-md-2">
+                                    <form action="{{ route('saveForLater.switchToCart', $item->rowId) }}" method="POST">
+                                        {{ csrf_field() }}
+
+                                        <button type="submit" class="btn btn-success">Move to Cart</button>
+                                    </form>
+                                </div>
+                                <div class="col-md-2 text-right">
+                                    <form action="{{ route('saveForLater.destroy', $item->rowId) }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger"><span class="fa fa-lg fa-close"></span></button>
+                                    </form>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    @else
+                    <div class="row pad-20 text-center">
+                        <h4>Anda tidak punya item di save later</h4>
+                    </div>
+                    @endif
         </div>
     </div>
-</div>
 @endsection

@@ -4,7 +4,7 @@
 <!-- Sub Header -->
 <div class="container">
     <div class="col-12">
-        <h2>Product {{$product->name}}</h2>
+        <h2>Product : {{$product->name}}</h2>
         <nav class="text-right" aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Beranda</a></li>
@@ -20,17 +20,23 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 m-bot-5">
-                <div class="col-md-5">
+                <div class="col-md-2">
                     <img src="{{asset('images/products/'.$product->slug.'.png')}}" alt="Card images" class="img-responsive"> 
                 </div>
-                <div class="col-md-6 col-md-offset-1">
+                <div class="col-md-4">
                     <h4>{{$product->name}}</h4>
-                    <p>{{$product->ytd}}.</p>
-                    <p>{{$product->kategori}}</p>
-                    <div class="readmore">
-                        <a href="#">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i> {{$product->presentPrice()}}</a>
-                    </div>
+                    <p>Ytd : {{$product->ytd}}.</p>
+                    <p>Reksadana {{$product->kategori}}</p>
+                </div>
+                <div class="col-md-2">
+                    <h4>{{$product->presentPrice()}}</h4>
+                    <form action="{{ route('cart.store') }}" method="POST">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="id" value="{{ $product->id }}">
+                        <input type="hidden" name="name" value="{{ $product->name }}">
+                        <input type="hidden" name="price" value="{{ $product->price }}">
+                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -41,17 +47,18 @@
                 <h3>Anda Mungkin Suka</h3>
                 <div class="row">
                     @foreach ($MungkinSuka as $MungkinAnda)
-                        <div class="col-md-3 m-bot-4">
-                            <div class="card"> 
-                                <a href="{{route('shop.show',$MungkinAnda->slug)}}">
-                                    <img class="card-img-top img-responsive" src="{{asset('images/products/'.$MungkinAnda->slug.'.png')}}" alt="Card images">
-                                    <div class="card-body">
-                                    <p class="card-text">{{$MungkinAnda->name}}</p>
-                                    <p class="card-text">{{$MungkinAnda->ytd}}</p>
-                                </a>
-                                <a href="{{route('shop.show',$MungkinAnda->slug)}}" class="btn btn-primary">{{$MungkinAnda->presentPrice()}}</a> </div>
+                    <div class="col-md-3 pad-20">
+                            <div class="card">
+                              <a href="{{route('shop.show',$MungkinAnda->slug)}}">
+                                <img class="card-img-top img-responsive" src="{{asset('images/products/'.$MungkinAnda->slug.'.png')}}" alt="Card images">
+                                <h4 class="card-title">{{$MungkinAnda->name}}</h4>
+                                <div class="card-body">
+                                  <p class="card-text">{{$MungkinAnda->ytd}}</p>
+                                </div>
+                              </a>
+                                <a href="{{route('shop.show',$MungkinAnda->slug)}}" class="btn btn-primary">{{$MungkinAnda->presentPrice()}}</a> 
                             </div>
-                        </div>
+                          </div>
                     @endforeach
                 </div>
                 </div>

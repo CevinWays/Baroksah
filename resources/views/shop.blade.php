@@ -47,9 +47,9 @@
                   <div class="card-body">
                     {{-- <p class="card-title">{{$product->name}}</p> --}}
                     <p class="card-text">{{$product->ytd}}</p>
-                  </div>
                 </a>
-                  <a href="{{route('shop.show',$product->slug)}}" class="btn btn-primary">{{$product->presentPrice()}}</a> 
+                    <a href="{{route('shop.show',$product->slug)}}" class="btn btn-primary">{{$product->presentPrice()}}</a> 
+                  </div>
               </div>
             </div>
           @endforeach
