@@ -67,18 +67,13 @@
       <div class="container">
         <div class="mod-menu">
           <div class="row">
-            <div class="col-sm-2"> <a href="index.html" title="" class="logo"> <img src="{{URL::asset('images/logo_baroksah.png')}}" alt=""> </a> </div>
+            <div class="col-sm-2"> <a href="{{route('landing-page')}}" title="" class="logo"> <img src="{{URL::asset('images/logo_baroksah.png')}}" alt=""> </a> </div>
             <div class="col-sm-10">
               <div class="main-nav">
                 <div id="menu" class="collapse">
                   <ul class="nav navbar-nav">
-                      <li class="active"> <a href="{{route('landing-page')}}">Beranda</a> <span class="arrow"></span></li>
-                      <li><a href="{{route('shop.index')}}">Halaman</a><span class="arrow"></span>
-                        <ul class="dm-align-2">
-                            <li><a href="{{route('shop.index')}}"> Beli</a></li>
-                            <li><a href="#"> Jual</a></li>
-                        </ul>
-                      </li>
+                      <li> <a href="{{route('landing-page')}}">Beranda</a> <span class="arrow"></span></li>
+                      <li><a href="{{route('shop.index')}}">Produk</a><span class="arrow"></span></li>
                       <li class="right"> <a href="#" class="m-link">Berita</a> <span class="arrow"></span></li>
                       <li class="right"> <a href="#" class="m-link">Tentang</a> <span class="arrow"></span></li>
                       <a href="{{route('cart.index')}}">
@@ -116,7 +111,7 @@
               <li><i class="fa fa-map-marker"></i> Jl Raya Candi 5 Blok D 226, <br>
                 Karangbesuki, Sukun 65146</li>
               <li><i class="fa fa-phone"></i> 082233928872</li>
-              <li><i class="fa fa-envelope"></i> <a href="mailto:info@yourdomain.com">cevinways34@gmail.com</a></li>
+              <li><i class="fa fa-envelope"></i> <a href="#">cevinways34@gmail.com</a></li>
             </ul>
             <!-- Social icons -->
             <div class="social-icons bor-light">

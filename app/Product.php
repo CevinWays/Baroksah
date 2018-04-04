@@ -12,6 +12,6 @@ class Product extends Model
     }
     public function scopeAndaMungkin($query)
     {
-        return $query->inRandomOrder()->take(4);
+        return $query->inRandomOrder()->take(6);
     }
 }

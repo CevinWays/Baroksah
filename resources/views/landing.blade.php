@@ -36,14 +36,14 @@
             data-effect="bottom(45)"
             data-duration="1000"
             data-delay="1700"
-            data-ease="easeOutExpo"> <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Investasi Sekarang!</a> </div>
+            data-ease="easeOutExpo"> <a href="{{route('shop.index')}}"><i class="fa fa-angle-right" aria-hidden="true"></i> Investasi Sekarang!</a> </div>
       <div class="ms-layer btn6 nodisplay"
 			style="left: 360px; top:500px;"
             data-type="text"
             data-effect="bottom(45)"
             data-duration="1000"
             data-delay="1700"
-            data-ease="easeOutExpo"> <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Lihat produk!</a> </div>
+            data-ease="easeOutExpo"> <a href="{{route('shop.index')}}"><i class="fa fa-angle-right" aria-hidden="true"></i> Lihat produk!</a> </div>
     </div>
     <!-- end of slide --> 
     
@@ -72,13 +72,13 @@
             data-delay="1400"
             data-duration="1000"
             data-effect="right(50)"
-            data-ease="easeOutExpo"> <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Investasi Sekarang!</a> </div>
+            data-ease="easeOutExpo"> <a href="{{route('shop.index')}}"><i class="fa fa-angle-right" aria-hidden="true"></i> Investasi Sekarang!</a> </div>
       <div class="ms-layer btn6 squre nodisplay"
 			style="left:750px; top: 480px;"
             data-delay="1400"
             data-duration="1000"
             data-effect="right(50)"
-            data-ease="easeOutExpo"> <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Lihat produk!</a> </div>
+            data-ease="easeOutExpo"> <a href="{{route('shop.index')}}"><i class="fa fa-angle-right" aria-hidden="true"></i> Lihat produk!</a> </div>
     </div>
     <!-- end of slide --> 
   </div>
@@ -94,23 +94,24 @@
   </div>
   <div class="col-md-12">
     <div class="row">
-      @foreach ($products as $product)
-      <div class="col-md-2 pad-20">
-        <div class="card">
-          <a href="{{route('shop.show',$product->slug)}}">
-            <img class="card-img-top img-responsive" src="{{asset('images/products/'.$product->slug.'.png')}}" alt="Card images">
-            <h4 class="card-title">{{$product->name}}</h4>
-            <div class="card-body">
-              <p class="card-text">{{$product->ytd}}</p>
+        @foreach ($products as $product)
+        <div class="col-md-2 col-sm-2 m-bot-5">
+          <div class="col-img-hover">
+            <div class="img-hover-st-4">
+              <div class="text">
+                <h3 class="uppercase">{{$product->slug}}</h3>
+                <p>{{$product->name}}</p>
+                <p>YTD : {{$product->ytd}}</p>
+                <br>
+                <a class="btn btn-sm btn-primary" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a></div>
+              <div class="imgbox img-responsive"> <img src="{{asset('images/products/'.$product->slug.'.png')}}" alt="Card images"></div>
             </div>
-          </a>
-            <a href="{{route('shop.show',$product->slug)}}" class="btn btn-primary">{{$product->presentPrice()}}</a> 
+          </div>
         </div>
-      </div>
-      @endforeach
+        @endforeach
     </div>
     </div>
-    <div class="readmore text-center"><a href="/shop"><i class="fa fa-angle-right" aria-hidden="true"></i> Lebih Banyak</a></div>
+    <div class="readmore text-center"><a href="{{route('shop.index')}}"><i class="fa fa-angle-right" aria-hidden="true"></i> Lebih Banyak</a></div>
   </div>
   <!-- end features Section -->
   <div class="clearfix"></div>
@@ -124,7 +125,7 @@
             antara lain seperti bank, asuransi, dana pensiun, pegadaian, multifinance, dan pasar modal.
             Reksa dana merupakan produk dari perusahaan yang masuk dalam kategori pasar modal yang diawasi oleh OJK sehingga bisa melakukan kegiatan penghimpunan dana dari masyarakat.
           </p>
-          <div class="readmore"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Investasi sekarang!</a></div>
+          <div class="readmore"><a href="{{route('shop.index')}}"><i class="fa fa-angle-right" aria-hidden="true"></i> Investasi sekarang!</a></div>
         </div>
         <div class="col-md-5 animate-in" data-anim-type="fade-in-left" data-anim-delay="100">
           <div class="video-box">

@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-4">
                     <h4>{{$product->name}}</h4>
-                    <p>Ytd : {{$product->ytd}}.</p>
+                    <p>YTD : {{$product->ytd}}</p>
                     <p>Reksadana {{$product->kategori}}</p>
                 </div>
                 <div class="col-md-2">
@@ -46,20 +46,22 @@
                 <div class="container">
                 <h3>Anda Mungkin Suka</h3>
                 <div class="row">
-                    @foreach ($MungkinSuka as $MungkinAnda)
-                    <div class="col-md-3 pad-20">
-                            <div class="card">
-                              <a href="{{route('shop.show',$MungkinAnda->slug)}}">
-                                <img class="card-img-top img-responsive" src="{{asset('images/products/'.$MungkinAnda->slug.'.png')}}" alt="Card images">
-                                <h4 class="card-title">{{$MungkinAnda->name}}</h4>
-                                <div class="card-body">
-                                  <p class="card-text">{{$MungkinAnda->ytd}}</p>
-                                </div>
-                              </a>
-                                <a href="{{route('shop.show',$MungkinAnda->slug)}}" class="btn btn-primary">{{$MungkinAnda->presentPrice()}}</a> 
+
+                        @foreach ($MungkinSuka as $MungkinAnda)
+                        <div class="col-md-2 col-sm-2 m-bot-2">
+                          <div class="col-img-hover">
+                            <div class="img-hover-st-4">
+                              <div class="text">
+                                <h3 class="uppercase">{{$MungkinAnda->slug}}</h3>
+                                <p>{{$MungkinAnda->name}}</p>
+                                <p>YTD : {{$product->ytd}}</p>
+                                <br>
+                                <a class="btn btn-sm btn-primary" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a></div>
+                              <div class="imgbox img-responsive"> <img src="{{asset('images/products/'.$MungkinAnda->slug.'.png')}}" alt="Card images"></div>
                             </div>
                           </div>
-                    @endforeach
+                        </div>
+                        @endforeach
                 </div>
                 </div>
             </div>
