@@ -43,6 +43,9 @@
 <!-- forms -->
 <link rel="stylesheet" href="{{URL::asset('js/form/css/sky-forms.css')}}" type="text/css" media="all">
 
+{{-- extra css Stripe --}}
+@yield('extra-css')
+
 </head>
 
 <body>
@@ -227,6 +230,9 @@
 <script type="text/javascript" src="{{URL::asset('js/form/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/form/jquery.form.min.js')}}"></script> 
 <script type="text/javascript" src="{{URL::asset('js/form/jquery.validate.min.js')}}"></script>
+
+@yield('extra-js')
+
 <script type="text/javascript">
 (function($) {
   "use strict";

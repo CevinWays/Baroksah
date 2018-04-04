@@ -38,7 +38,7 @@
         @if (Cart::count() > 0)
         <h4>({{ Cart::count() }}) item di keranjang anda</h4>
         @foreach (Cart::content() as $item)
-            <div class="card pad-20">
+            <div class="card">
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
@@ -101,7 +101,7 @@
             
             <div class="row pad-20">
                 <div class="col-12 m-bot-5">
-                    <button type="button" class="btn btn-rounded btn-secondary">Checkout</button>
+                    <a href="{{route('checkout.index')}}" class="btn btn-rounded btn-secondary">Checkout</a>
                     <a href="{{route('shop.index')}}" class="btn btn-rounded btn-primary">Lanjut Belanja</a>
                 </div>
             </div>
@@ -115,7 +115,7 @@
             @if (Cart::instance('saveForLater')->count() > 0)
                 <h4>({{ Cart::instance('saveForLater')->count() }}) item di Save Later</h4>
                 @foreach (Cart::instance('saveForLater')->content() as $item)
-                    <div class="card pad-20">
+                    <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">

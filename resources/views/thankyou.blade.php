@@ -2,18 +2,25 @@
 @section('content')
 <div class="clearfix"></div>
 <!-- Sub Header -->
+
 <div class="container">
-        <div class="col-12">
-            <h2>Terimakasih</h2>
-            <nav class="text-right" aria-label="breadcrumb" role="navigation">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Thankyou</li>
-                </ol>
-            </nav>
+    <div class="row">
+        @if (session()->has('success_message'))
+        <div class="alert alert-success">
+            {{ session()->get('success_message') }}
         </div>
+        @endif 
+        @if(count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>2
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
     </div>
-    <!-- Sub Header -->
+</div>
 <div class="clearfix"></div>
 <!-- end features Section 01 -->
 
@@ -26,6 +33,7 @@
                     <div class="hr-line blue-color m-bot-2"></div>
                     <p>Terimakasih telah membeli reksadana di Baroksah
                         <br> Anda akan menerima email pemberitahuan</p>
+                    <a href="{{route('shop.index')}}" class="btn btn-rounded btn-primary">Lanjut Belanja</a>
                 </div>
             </div>
         </div>

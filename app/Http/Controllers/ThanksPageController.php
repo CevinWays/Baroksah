@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class ThanksPageController extends Controller
 {
     public function index(){
+        if (! session()->has('success_message')) {
+            return redirect('/');
+        }
         return view('thankyou');
     }
 }

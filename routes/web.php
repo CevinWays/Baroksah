@@ -23,10 +23,13 @@ Route::post('/cart/switchToSaveForLater/{product}', 'CartPageController@switchTo
 Route::delete('/saveForLater/{product}', 'SaveForLaterController@destroy')->name('saveForLater.destroy');
 Route::post('/saveForLater/switchToCart/{product}', 'SaveForLaterController@switchToCart')->name('saveForLater.switchToCart');
 
-Route::get('empty', function(){
-    Cart::instance('saveForLater')->destroy();
-});
+Route::get('/checkout', 'CheckoutPageController@index')->name('checkout.index');
+Route::post('/checkout', 'CheckoutPageController@store')->name('checkout.store');
+
+// Route::get('empty', function(){
+//     Cart::instance('saveForLater')->destroy();
+// });
 
 Route::get('/product', 'ProductPageController@index')->name('product.index');
-Route::get('/thankyou', 'ThanksPageController@index')->name('thanks.index');
+Route::get('/thankyou', 'ThanksPageController@index')->name('thankyou.index');
 Route::get('/checkout', 'CheckoutPageController@index')->name('checkout.index');
