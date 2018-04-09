@@ -2,7 +2,7 @@
 
 function presentPrice($price)
 {
-    return 'Rp'.number_format($price / 100, 2);
+    return 'Rp'.number_format($price / 1);
 }
 
 // function setActiveCategory($category, $output = 'active')

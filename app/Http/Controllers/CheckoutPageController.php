@@ -43,10 +43,10 @@ class CheckoutPageController extends Controller
 
         try {
             $charge = Stripe::charges()->create([
-                'amount' =>Cart::total() / 100,
+                'amount' =>Cart::total() / 13000,
                 'currency' => 'usd',
                 'source' => $request->stripeToken,
-                'description' => 'Order',
+                'description' => 'Pembelian Reksadana',
                 'receipt_email' => $request->email,
                 'metadata' => [
                     'contents' => $contents,
