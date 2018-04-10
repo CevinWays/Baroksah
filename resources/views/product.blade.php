@@ -7,8 +7,12 @@
         <h2>Product : {{$product->name}}</h2>
         <nav class="text-right" aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-                <li class="breadcrumb-item"><a href="/shop">Shop</a></li>
+                <li class="breadcrumb-item">
+                    <a href="/">Beranda</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/shop">Shop</a>
+                </li>
                 <li class="breadcrumb-item active" aria-current="page">Product</li>
             </ol>
         </nav>
@@ -21,7 +25,7 @@
         <div class="row">
             <div class="col-sm-12 m-bot-5">
                 <div class="col-md-2">
-                    <img src="{{asset('images/products/'.$product->slug.'.png')}}" alt="Card images" class="img-responsive"> 
+                    <img src="{{asset('images/products/'.$product->slug.'.png')}}" alt="Card images" class="img-responsive">
                 </div>
                 <div class="col-md-4">
                     <h4>{{$product->name}}</h4>
@@ -42,32 +46,35 @@
         </div>
 
         <div class="clearfix"></div>
-            <div class="section-md">
-                <div class="container">
+        <div class="section-md">
+            <div class="container">
                 <h3>Anda Mungkin Suka</h3>
                 <div class="row">
 
-                        @foreach ($MungkinSuka as $MungkinAnda)
-                        <div class="col-md-2 col-sm-2 m-bot-2">
-                          <div class="col-img-hover">
+                    @foreach ($MungkinSuka as $MungkinAnda)
+                    <div class="col-md-2 col-sm-2 m-bot-2">
+                        <div class="col-img-hover">
                             <div class="img-hover-st-4">
-                              <div class="text">
-                                <h3 class="uppercase">{{$MungkinAnda->slug}}</h3>
-                                <p>{{$MungkinAnda->name}}</p>
-                                <p>YTD : {{$product->ytd}}</p>
-                                <br>
-                                <a class="btn btn-sm btn-primary" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a></div>
-                              <div class="imgbox img-responsive"> <img src="{{asset('images/products/'.$MungkinAnda->slug.'.png')}}" alt="Card images"></div>
+                                <div class="text">
+                                    <h3 class="uppercase">{{$MungkinAnda->slug}}</h3>
+                                    <p>{{$MungkinAnda->name}}</p>
+                                    <p>YTD : {{$product->ytd}}</p>
+                                    <br>
+                                    <a class="btn btn-sm btn-primary" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a>
+                                </div>
+                                <div class="imgbox img-responsive">
+                                    <img src="{{asset('images/products/'.$MungkinAnda->slug.'.png')}}" alt="Card images">
+                                </div>
                             </div>
-                          </div>
                         </div>
-                        @endforeach
-                </div>
+                    </div>
+                    @endforeach
                 </div>
             </div>
+        </div>
     </div>
-        <!-- row -->
-    </div>
+    <!-- row -->
+</div>
 </section>
 </div>
 </div>

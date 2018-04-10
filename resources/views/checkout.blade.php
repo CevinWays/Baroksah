@@ -68,7 +68,7 @@
               <section>
                 <label class="label">Address</label>
                 <label class="input">
-                  <i class="icon-append fa fa-tag"></i>
+                  <i class="icon-append fa fa-building"></i>
                   <input name="address" id="address" type="text" value="{{ old('address') }}" required>
                 </label>
               </section>
@@ -76,7 +76,7 @@
               <section>
                 <label class="label">City</label>
                 <label class="input">
-                  <i class="icon-append fa fa-tag"></i>
+                  <i class="icon-append fa fa-building"></i>
                   <input name="city" id="city" type="text" value="{{ old('city') }}" required>
                 </label>
               </section>
@@ -84,7 +84,7 @@
               <section>
                 <label class="label">Province</label>
                 <label class="input">
-                  <i class="icon-append fa fa-tag"></i>
+                  <i class="icon-append fa fa-building"></i>
                   <input name="province" id="province" type="text" value="{{ old('province') }}" required>
                 </label>
               </section>
@@ -100,7 +100,7 @@
               <section>
                 <label class="label">Phone</label>
                 <label class="input">
-                  <i class="icon-append fa fa-tag"></i>
+                  <i class="icon-append fa fa-phone"></i>
                   <input name="phone" id="phone" type="text" value="{{ old('phone') }}" required>
                 </label>
               </section>
@@ -108,7 +108,7 @@
               <section>
                 <label class="label">Name on Card</label>
                 <label class="input">
-                  <i class="icon-append fa fa-tag"></i>
+                  <i class="icon-append fa fa-credit-card"></i>
                   <input name="name_on_card" id="name_on_card" type="text" value="" required>
                 </label>
               </section>
@@ -169,13 +169,22 @@
                             <td>{{presentPrice(Cart::tax())}}</td>
                         </tr>
                         <tr>
-                            <td><strong>Total</strong></td>
+                  <td>
+                    <strong>Total</strong>
+                  </td>
                             <td>:</td>
-                            <td>{{presentPrice(Cart::total())}}</td>
+                            <td><strong>{{presentPrice(Cart::total())}}</strong></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="f-15">Punya Kode Kupon?</div>
+                <input type="text" name="cupon" id="" class="sky-form sty-one">
+                <button type="submit" class="btn btn-primary">Apply</button>
+              </div>
             </div>
         </div>
       </div>
