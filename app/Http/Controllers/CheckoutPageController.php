@@ -16,7 +16,18 @@ class CheckoutPageController extends Controller
      */
     public function index()
     {
-        return view('checkout');
+        // $tax = config('cart.tax')/100;
+        // $discount = session()->get('coupon')['discount']??0;
+        // $newSubtotal=(Cart::subtotal() - $discount);
+        // $newTax = $newSubtotal * $tax;
+        // $newTotal = $newSubtotal * (1+$tax);
+
+        return view('checkout')->with([
+            'discount' => $this->getNumbers()->get('discount'),
+            'newSubtotal' => $this->getNumbers()->get('newSubtotal'),
+            'newTax' => $this->getNumbers()->get('newTax'),
+            'newTotal' => $this->getNumbers()->get('newTotal'),
+        ]);
     }
 
     /**
@@ -43,7 +54,7 @@ class CheckoutPageController extends Controller
 
         try {
             $charge = Stripe::charges()->create([
-                'amount' =>Cart::total() / 13000,
+                'amount' => $this->getNumbers()->get('newTotal') / 13000,
                 'currency' => 'usd',
                 'source' => $request->stripeToken,
                 'description' => 'Pembelian Reksadana',
@@ -51,6 +62,7 @@ class CheckoutPageController extends Controller
                 'metadata' => [
                     'contents' => $contents,
                     'quantity' => Cart::instance('default')->count(),
+                    'discount' => collect(session()->get('coupon'))->toJson(),
                 ],
             ]);
 
@@ -58,6 +70,7 @@ class CheckoutPageController extends Controller
             // Mail::send(new OrderPlaced($order));
 
             Cart::instance('default')->destroy();
+            session()->forget('coupon');
             // session()->forget('coupon');
 
             return redirect()->route('thankyou.index')->with('success_message', 'Terimakasih pembayaran anda telah berhasil!');
@@ -67,48 +80,19 @@ class CheckoutPageController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    private function getNumbers(){
+        $tax = config('cart.tax')/100;
+        $discount = session()->get('coupon')['discount']??0;
+        $newSubtotal=(Cart::subtotal() - $discount);
+        $newTax = $newSubtotal * $tax;
+        $newTotal = $newSubtotal * (1+$tax);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return collect([
+            'tax' => $tax,
+            'discount' => $discount,
+            'newSubtotal' => $newSubtotal,
+            'newTax' => $newTax,
+            'newTotal' => $newTotal,
+        ]);
     }
 }
