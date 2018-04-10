@@ -36,3 +36,7 @@ Route::post('/checkout', 'CheckoutPageController@store')->name('checkout.store')
 Route::get('/product', 'ProductPageController@index')->name('product.index');
 Route::get('/thankyou', 'ThanksPageController@index')->name('thankyou.index');
 Route::get('/checkout', 'CheckoutPageController@index')->name('checkout.index');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
