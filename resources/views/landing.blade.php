@@ -76,7 +76,7 @@
               <p>YTD : {{$product->ytd}}</p>
             </div>
             <div class="imgbox img-responsive">
-              <img src="{{asset('images/products/'.$product->slug.'.png')}}" alt="Card images">
+              <img src="{{asset('storage/'.$product->image)}}" alt="Card images" class="img-responsive">
             </div>
           </div>
         </div>

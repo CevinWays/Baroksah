@@ -141,7 +141,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="col-md-4">
-                  <img src="{{asset('images/products/'.$item->model->slug.'.png')}}" alt="item" class="cart-table-img">
+                  <img src="{{asset('storage/'.$item->model->image)}}" alt="Card images" class="img-responsive">
                 </div>
                 <div class="col-md-6">
                   <h4>{{ $item->model->name }}</h4>

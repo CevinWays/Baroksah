@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-sm-12 m-bot-5">
                 <div class="col-md-2">
-                    <img src="{{asset('images/products/'.$product->slug.'.png')}}" alt="Card images" class="img-responsive">
+                    <img src="{{asset('storage/'.$product->image)}}" alt="Card images" class="img-responsive">
                 </div>
                 <div class="col-md-4">
                     <h4>{{$product->name}}</h4>
@@ -63,7 +63,7 @@
                                     <a class="btn btn-sm btn-primary" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a>
                                 </div>
                                 <div class="imgbox img-responsive">
-                                    <img src="{{asset('images/products/'.$MungkinAnda->slug.'.png')}}" alt="Card images">
+                                    <img src="{{asset('storage/'.$MungkinAnda->image)}}" alt="Card images" class="img-responsive">
                                 </div>
                             </div>
                         </div>
