@@ -55,12 +55,12 @@
                     <div class="col-md-2 col-sm-2 m-bot-2">
                         <div class="col-img-hover">
                             <div class="img-hover-st-4">
-                                <div class="text">
+                                <div class="text center">
+                                    <a class="btn btn-sm btn-outline-primary" style="color: white" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a>
+                                    <br>
                                     <h3 class="uppercase">{{$MungkinAnda->slug}}</h3>
                                     <p>{{$MungkinAnda->name}}</p>
                                     <p>YTD : {{$product->ytd}}</p>
-                                    <br>
-                                    <a class="btn btn-sm btn-primary" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a>
                                 </div>
                                 <div class="imgbox img-responsive">
                                     <img src="{{asset('storage/'.$MungkinAnda->image)}}" alt="Card images" class="img-responsive">

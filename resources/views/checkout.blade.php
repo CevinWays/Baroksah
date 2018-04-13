@@ -59,7 +59,7 @@
                 <label class="label">E-mail</label>
                 <label class="input">
                   <i class="icon-append fa fa-envelope-o"></i>
-                  <input name="email" id="email" type="email" value="{{ old('email') }}" required>
+                  <input name="email" id="email" type="email" value="{{ auth()->user()->email }}" readonly
                 </label>
               </section>
             </div>

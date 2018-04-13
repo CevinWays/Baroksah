@@ -56,8 +56,31 @@
         <div class="row">
           <div class="col-md-6"><i class="fa fa-envelope-o"></i> cevinways34@gmail.com <span>|</span> <i class="fa fa-phone"></i> 082233928872</div>
           <div class="col-md-6 right-padd0 text-right social-media">
-            <a href="#">Masuk</a> 
-            <a href="#">Buat Akun</a>
+            @guest
+            <a href="{{ route('login') }}">Masuk</a> 
+            <a href="{{ route('register') }}">Buat Akun</a>
+            @else
+            {{-- <ul class="navbar-nav">
+              <li class="nav-item dropdown text-right"> --}}
+                  <a href="#" role="button">
+                      <span class="fa fa-user"></span> {{ Auth::user()->name }}
+                  </a>
+
+                  {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> --}}
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                          {{ __('Logout') }}
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
+                  {{-- </div> --}}
+              {{-- </li>
+            </ul> --}}
+            @endguest
+            {{-- <a href="/register">Buat Akun</a> --}}
           </div>
         </div>
         <!--end of row--> 
@@ -73,7 +96,11 @@
                 <div id="menu" class="collapse">
                   <ul class="nav navbar-nav">
                       <li> <a href="{{route('landing-page')}}">Beranda</a> <span class="arrow"></span></li>
-                      <li><a href="{{route('shop.index')}}">Produk</a><span class="arrow"></span></li>
+                      <li><a href="{{route('shop.index')}}">Beli Produk</a><span class="arrow"></span></li>
+                      @guest
+                      @else
+                      <li><a href="#">Jual Produk</a><span class="arrow"></span></li>
+                      @endguest
                       <li class="right"> <a href="#" class="m-link">Berita</a> <span class="arrow"></span></li>
                       <li class="right"> <a href="#" class="m-link">Tentang</a> <span class="arrow"></span></li>
                       <a href="{{route('cart.index')}}">

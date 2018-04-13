@@ -55,7 +55,7 @@
           <div class="col-img-hover">
             <div class="img-hover-st-4">
               <div class="text">
-                <a class="btn btn-primary" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a>
+                <a class="btn btn-sm btn-outline-primary" style="color: white" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a>
                 <br>
                 <h3 class="uppercase">{{$product->slug}}</h3>
                 <p>{{$product->name}}</p>
