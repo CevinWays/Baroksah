@@ -63,13 +63,13 @@
                             <form action="{{ route('cart.switchToSaveForLater', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }}
 
-                                <button type="submit" class="btn btn-success">Save for later</button>
+                                <button type="submit" class="btn btn-rounded btn-success">Save for later</button>
                             </form>
                         </div>
                         <div class="col-md-2 text-right">
                             <form action="{{ route('cart.destroy', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }} {{ method_field('DELETE') }}
-                                <button type="submit" class="btn btn-danger">
+                                <button type="submit" class="btn">
                                     <span class="fa fa-lg fa-close"></span>
                                 </button>
                             </form>
@@ -113,15 +113,17 @@
         </div>
 
         <div class="row pad-20">
-            <div class="col-12 m-bot-5">
-                <a href="{{route('checkout.index')}}" class="btn btn-rounded btn-secondary">Checkout</a>
+            <div class="col-12 m-bot-5 text-right">
                 <a href="{{route('shop.index')}}" class="btn btn-rounded btn-primary">Lanjut Belanja</a>
+                <a href="{{route('checkout.index')}}" class="btn btn-rounded btn-secondary">Checkout</a>
             </div>
         </div>
         @else
         <div class="row pad-20 text-center">
+            <span class="fa fa-3x fa-shopping-cart"></span>
             <h1>Tidak ada item di Cart!</h1>
             <a href="{{route('shop.index')}}" class="btn btn-rounded btn-primary">Lanjut Belanja</a>
+            <hr>
         </div>
         @endif @if (Cart::instance('saveForLater')->count() > 0)
         <h4>({{ Cart::instance('saveForLater')->count() }}) item di Save Later</h4>
@@ -144,13 +146,13 @@
                             <form action="{{ route('saveForLater.switchToCart', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }}
 
-                                <button type="submit" class="btn btn-success">Move to Cart</button>
+                                <button type="submit" class="btn btn-rounded btn-success">Move to Cart</button>
                             </form>
                         </div>
                         <div class="col-md-2 text-right">
                             <form action="{{ route('saveForLater.destroy', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }} {{ method_field('DELETE') }}
-                                <button type="submit" class="btn btn-danger">
+                                <button type="submit" class="btn">
                                     <span class="fa fa-lg fa-close"></span>
                                 </button>
                             </form>
@@ -161,6 +163,7 @@
         </div>
         @endforeach @else
         <div class="row pad-20 text-center">
+            <span class="fa fa-3x fa-bookmark"></span>
             <h4>Anda tidak punya item di save later</h4>
         </div>
         @endif

@@ -65,6 +65,9 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Lupa Password?') }}
                                 </a>
+                                <a class="btn btn-link" href="{{ route('guestCheckout.index') }}">
+                                    {{ __('Checkout sebagai guest?') }}
+                                </a>
                             </div>
                         </div>
                     </form>

@@ -95,6 +95,8 @@
               <div class="main-nav">
                 <div id="menu" class="collapse">
                   <ul class="nav navbar-nav">
+                    @if (! (request()->is('checkout') || request()->is('guestCheckout')) )
+                        
                       <li> <a href="{{route('landing-page')}}">Beranda</a> <span class="arrow"></span></li>
                       <li><a href="{{route('shop.index')}}">Beli Produk</a><span class="arrow"></span></li>
                       @guest
@@ -111,6 +113,7 @@
                             </span>
                         </li>
                       </a>
+                    @endif
                     </ul>
                 </div>
               </div>

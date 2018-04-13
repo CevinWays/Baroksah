@@ -21,7 +21,7 @@
       {{-- <span><i class="fa fa-info"></i></span> --}}
       <ul>
         @foreach ($errors->all() as $error)
-          <li><span class="fa fa-info-circle"></span> {{ $error }}</li>
+          <li><span class="fa fa-info-circle"></span> {!! $error !!}</li>
         @endforeach
       </ul>
     </div>
@@ -58,8 +58,12 @@
               <section class="col col-6">
                 <label class="label">E-mail</label>
                 <label class="input">
-                  <i class="icon-append fa fa-envelope-o"></i>
-                  <input name="email" id="email" type="email" value="{{ auth()->user()->email }}" readonly
+                  @if (auth()->user())    
+                    <i class="icon-append fa fa-envelope-o"></i>
+                    <input name="email" id="email" type="email" value="{{ auth()->user()->email }}" readonly>
+                  @else
+                    <input name="email" id="email" type="email" value="{{ old('email') }}" required>
+                  @endif
                 </label>
               </section>
             </div>
