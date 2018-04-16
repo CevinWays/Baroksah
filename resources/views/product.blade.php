@@ -55,23 +55,27 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 m-bot-4">
-                <div class="col-md-2 m-top-1">
-                    <img src="{{asset('storage/'.$product->image)}}" alt="Card images" class="img-responsive">
-                </div>
-                <div class="col-md-4">
-                    <h4>{{$product->name}}</h4>
-                    <p>YTD : {{$product->ytd}}</p>
-                    <p>Reksadana {{$product->kategori}}</p>
-                </div>
-                <div class="col-md-2">
-                    <h4>{{$product->presentPrice()}}</h4>
-                    <form action="{{ route('cart.store') }}" method="POST">
-                        {{ csrf_field() }}
-                        <input type="hidden" name="id" value="{{ $product->id }}">
-                        <input type="hidden" name="name" value="{{ $product->name }}">
-                        <input type="hidden" name="price" value="{{ $product->price }}">
-                        <button type="submit" class="btn btn-primary">Tambah ke Cart</button>
-                    </form>
+                <div class="card" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white" >
+                    <div class="row">
+                        <div class="col-md-2 m-top-1">
+                            <img src="{{asset('storage/'.$product->image)}}" alt="Card images" class="img-responsive">
+                        </div>
+                        <div class="col-md-4">
+                            <h4>{{$product->name}}</h4>
+                            <p>YTD : {{$product->ytd}}</p>
+                            <p>Reksadana {{$product->kategori}}</p>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>{{$product->presentPrice()}}</h4>
+                            <form action="{{ route('cart.store') }}" method="POST">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="id" value="{{ $product->id }}">
+                                <input type="hidden" name="name" value="{{ $product->name }}">
+                                <input type="hidden" name="price" value="{{ $product->price }}">
+                                <button type="submit" class="btn btn-primary">Tambah ke Cart</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,7 +85,7 @@
 
             @foreach ($MungkinSuka as $MungkinAnda)
             <div class="col-md-2 col-sm-2 m-bot-2">
-                <div class="col-img-hover">
+                <div class="col-img-hover" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white" >
                     <div class="img-hover-st-4">
                         <div class="text center">
                             <a class="btn btn-sm btn-outline-primary" style="color: white" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a>

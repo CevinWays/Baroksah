@@ -52,3 +52,5 @@ Route::get('/search','ShopPageController@search')->name('search');
 
 Route::get('/profile','UserController@profile')->name('profile');
 Route::post('/profile','UserController@update')->name('profile.update');
+Route::get('/berita','BeritaController@index')->name('berita.index');
+Route::get('/tentang','TentangController@index')->name('tentang.index');

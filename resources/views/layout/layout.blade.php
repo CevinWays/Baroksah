@@ -95,8 +95,8 @@
                       @else
                       <li><a href="#">Jual Produk</a><span class="arrow"></span></li>
                       @endguest
-                      <li class="right"> <a href="#" class="m-link">Berita</a> <span class="arrow"></span></li>
-                      <li class="right"> <a href="#" class="m-link">Tentang</a> <span class="arrow"></span></li>
+                      <li class="right"> <a href="{{route('berita.index')}}" class="m-link">Berita</a> <span class="arrow"></span></li>
+                      <li class="right"> <a href="{{route('tentang.index')}}" class="m-link">Tentang</a> <span class="arrow"></span></li>
                       <a href="{{route('cart.index')}}">
                         <li class="right" style="top: 18px">
                             <span class="fa-stack fa-lg has-badge" data-count="{{ Cart::instance('default')->count() }}">
@@ -154,13 +154,13 @@
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <ul class="list-icon">
                   <li><i class="fa fa-angle-right"></i> <a href="{{route('landing-page')}}">Beranda</a></li>
-                  <li><i class="fa fa-angle-right"></i> <a href="#">Berita</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="{{route('berita.index')}}">Berita</a></li>
                 </ul>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <ul class="list-icon">
-                  <li><i class="fa fa-angle-right"></i> <a href="{{route('shop.index')}}">Halaman</a></li>
-                  <li><i class="fa fa-angle-right"></i> <a href="#">Tentang</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="{{route('shop.index')}}">Beli Produk</a></li>
+                  <li><i class="fa fa-angle-right"></i> <a href="{{route('tentang.index')}}">Tentang</a></li>
                 </ul>
               </div>
             </div>

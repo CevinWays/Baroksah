@@ -57,16 +57,16 @@
 <div class="section-lg nopadd m-top-10">
   <div class="col-md-12 text-center">
     <div class="m-bot-6">
-      <h1 class="f-35 font-bold uppercase">produk baroksah</h1>
+      <h1 class="f-35 font-bold uppercase">produk baroksah terbaik</h1>
       <div class="hr-line blue-color m-bot-2"></div>
-      <p>Produk produk reksadana terbaik dari baroksah</p>
+      <p>6 produk reksadana terbaik dari baroksah</p>
     </div>
   </div>
   <div class="col-md-12">
     <div class="row">
       @foreach ($products as $product)
       <div class="col-md-2 col-sm-2 m-bot-5">
-        <div class="col-img-hover">
+        <div class="col-img-hover" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white" >
           <div class="img-hover-st-4">
             <div class="text">
               <a class="btn btn-sm btn-outline-primary" style="color: white" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a>

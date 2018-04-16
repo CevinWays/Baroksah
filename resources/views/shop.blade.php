@@ -84,7 +84,7 @@
 
         @foreach ($products as $product)
         <div class="col-md-2 col-sm-2 m-bot-2">
-          <div class="col-img-hover">
+          <div class="col-img-hover" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white" >
             <div class="img-hover-st-4">
               <div class="text">
                 <a class="btn btn-sm btn-outline-primary" style="color: white" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a>
