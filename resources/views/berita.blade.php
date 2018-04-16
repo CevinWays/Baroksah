@@ -54,10 +54,9 @@
                     <div class="post-item-wrap">
                       <div class="post-image sty-one"><a href="#"><img alt="" src="images/reksadana1.jpg" class="img-responsive"></a></div>
                       <div class="post-item-description nopad-side">
-                        <h2><a href="#">The Multi-purpose HTML5 Theme</a></h2>
+                        <h2><a href="#">Reksadana Pekan Ke-4 Maret 2018: Kinerja Pendapatan Tetap dan Pasar Uang Positif</a></h2>
                         <span class="post-meta-date"><i class="fa fa-calendar-o"></i> Jan 21, 2017</span> <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i> 33 Comments</a></span>
-                        <p>Dolor sit amet isse potenti nulla esquam ante aliquet lacusemper elit Sed ante aliquet id dolor consectetur fermentum.</p>
-                        <div class="readmore styone plain"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Readmore</a></div>
+                        <p>Reksadana Pekan Ke-4 Maret 2018: Kinerja Pendapatan Tetap .</p>
                       </div>
                     </div>
                   </div>
@@ -65,10 +64,9 @@
                     <div class="post-item-wrap">
                       <div class="post-image sty-one"><a href="#"><img alt="" src="images/reksadana2.jpg" class="img-responsive"></a></div>
                       <div class="post-item-description nopad-side">
-                        <h2><a href="#">The Multi-purpose HTML5 Theme</a></h2>
+                        <h2><a href="#">PLN Resmi Setop Penawaran Obligasi Berkelanjutan II dan Sukuk Ijarah</a></h2>
                         <span class="post-meta-date"><i class="fa fa-calendar-o"></i> Jan 21, 2017</span> <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i> 33 Comments</a></span>
-                        <p>Dolor sit amet isse potenti nulla esquam ante aliquet lacusemper elit Sed ante aliquet id dolor consectetur fermentum.</p>
-                        <div class="readmore styone plain"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Readmore</a></div>
+                        <p>PLN Resmi Setop Penawaran Obligasi Berkelanjutan II dan Sukuk Ijarah.</p>
                       </div>
                     </div>
                   </div>
@@ -76,10 +74,9 @@
                     <div class="post-item-wrap">
                       <div class="post-image sty-one"><a href="#"><img alt="" src="images/reksadana3.jpg" class="img-responsive"></a></div>
                       <div class="post-item-description nopad-side">
-                        <h2><a href="#">The Multi-purpose HTML5 Theme</a></h2>
+                        <h2><a href="#">Akibat DMO, Potensi Pendapatan Anak Usaha BUMI Lebih Kecil Rp3,4 Triliun</a></h2>
                         <span class="post-meta-date"><i class="fa fa-calendar-o"></i> Jan 21, 2017</span> <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i> 33 Comments</a></span>
-                        <p>Dolor sit amet isse potenti nulla esquam ante aliquet lacusemper elit Sed ante aliquet id dolor consectetur fermentum.</p>
-                        <div class="readmore styone plain"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Readmore</a></div>
+                        <p>Akibat DMO, Potensi Pendapatan Anak Usaha BUMI Lebih Kecil Rp3,4 Triliun.</p>
                       </div>
                     </div>
                   </div>
@@ -87,10 +84,9 @@
                     <div class="post-item-wrap">
                       <div class="post-image sty-one"><a href="#"><img alt="" src="images/reksadana4.jpg" class="img-responsive"></a></div>
                       <div class="post-item-description nopad-side">
-                        <h2><a href="#">The Multi-purpose HTML5 Theme</a></h2>
+                        <h2><a href="#">Terbitkan RDPT, Waskita Toll Road Raup Dana Rp 5 Triliun</a></h2>
                         <span class="post-meta-date"><i class="fa fa-calendar-o"></i> Jan 21, 2017</span> <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i> 33 Comments</a></span>
-                        <p>Dolor sit amet isse potenti nulla esquam ante aliquet lacusemper elit Sed ante aliquet id dolor consectetur fermentum.</p>
-                        <div class="readmore styone plain"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Readmore</a></div>
+                        <p>Terbitkan RDPT, Waskita Toll Road Raup Dana Rp 5 Triliun .</p>
                       </div>
                     </div>
                   </div>

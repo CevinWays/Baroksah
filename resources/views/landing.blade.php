@@ -114,7 +114,7 @@
               <img src="images/reksadana.jpg" alt="" class="img-responsive">
             </div>
             <div class="video-body">
-              <a class="bla-1 video-link" href="https://www.youtube.com/watch?v=H-M6o6gFzVg">
+              <a class="bla-1 video-link" href="https://www.youtube.com/watch?v=H-M6o6gFzVg" target="blank">
                 <span class="icon-play">
                   <i class="fa fa-play space-40"></i>
                 </span>
@@ -138,7 +138,7 @@
       <div class="col-md-5 post-item m-bot-3">
         <div class="post-item-wrap">
           <div class="post-image sty-one">
-            <a href="#">
+            <a href="{{route('berita.index')}}">
               <img alt="" src="images/reksadana3.jpg" class="img-responsive"> </a>
             <span class="post-meta-category">
               <a href="">HOT</a>
@@ -152,12 +152,12 @@
                 <i class="fa fa-comments-o"></i> 33 Comments</a>
             </span>
             <h2>
-              <a href="#">Akibat DMO, Potensi Pendapatan Anak Usaha BUMI Lebih Kecil Rp3,4 Triliun</a>
+              <a href="{{route('berita.index')}}">Akibat DMO, Potensi Pendapatan Anak Usaha BUMI Lebih Kecil Rp3,4 Triliun</a>
             </h2>
             <p>Sejumlah perusahaan batu bara mengaku tergerus marginnya akibat kebijakan pembatasan harga penjualan batu bara
               dalam negeri.</p>
             <div class="readmore styone plain">
-              <a href="#">
+              <a href="{{route('berita.index')}}">
                 <i class="fa fa-angle-right" aria-hidden="true"></i> Baca</a>
             </div>
           </div>
@@ -169,7 +169,7 @@
             <div class="post-item">
               <div class="post-item-wrap">
                 <div class="post-image sty-one">
-                  <a href="#">
+                  <a href="{{route('berita.index')}}">
                     <img alt="" src="images/reksadana2.jpg" class="img-responsive"> </a>
                   <span class="post-meta-category">
                     <a href="">HOT</a>
@@ -187,12 +187,12 @@
                   <i class="fa fa-comments-o"></i> 33 Comments</a>
               </span>
               <h2>
-                <a href="#">PLN Resmi Setop Penawaran Obligasi Berkelanjutan II dan Sukuk Ijarah</a>
+                <a href="{{route('berita.index')}}">PLN Resmi Setop Penawaran Obligasi Berkelanjutan II dan Sukuk Ijarah</a>
               </h2>
               <p>PT Perusahaan Listrik Negara (Persero) alias PLN resmi menghentikan penawaran umum berkelanjutan II dan Sukuk
                 Ijarah berkelanjutan II..</p>
               <div class="readmore styone plain">
-                <a href="#">
+                <a href="{{route('berita.index')}}">
                   <i class="fa fa-angle-right" aria-hidden="true"></i> Baca</a>
               </div>
             </div>
@@ -205,7 +205,7 @@
             <div class="post-item">
               <div class="post-item-wrap">
                 <div class="post-image sty-one">
-                  <a href="#">
+                  <a href="{{route('berita.index')}}">
                     <img alt="" src="images/reksadana1.jpg" class="img-responsive"> </a>
                   <span class="post-meta-category">
                     <a href="">HOT</a>
@@ -223,11 +223,11 @@
                   <i class="fa fa-comments-o"></i> 33 Comments</a>
               </span>
               <h2>
-                <a href="#">Reksadana Pekan Ke-4 Maret 2018: Kinerja Pendapatan Tetap dan Pasar Uang Positif</a>
+                <a href="{{route('berita.index')}}">Reksadana Pekan Ke-4 Maret 2018: Kinerja Pendapatan Tetap dan Pasar Uang Positif</a>
               </h2>
               <p>ndeks Harga Saham Gabungan (IHSG) pada pekan keempat Maret 2018 terus melanjutkan pelemahannya.</p>
               <div class="readmore styone plain">
-                <a href="#">
+                <a href="{{route('berita.index')}}">
                   <i class="fa fa-angle-right" aria-hidden="true"></i> Baca</a>
               </div>
             </div>

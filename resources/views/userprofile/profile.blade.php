@@ -84,7 +84,7 @@
 
             <div class="col-md-4 col-sm-12 col-xs-12" data-anim-type="fade-in-down" data-anim-delay="100">
                 <div class="row">
-                    <div class="feature-col-02 sty-01 active" style="height: 150px;padding: 20px;margin: 10px; background-color: turquoise;border-color: white;">
+                    <div class="feature-col-02 sty-01 active" style="height: 150px;padding: 20px;margin: 10px; background-color: #FFA000;border-color: white;">
                         <h4 class="uppercase white" ><span class="fa fa-money"></span> Billing Information</h4>
                         <table>
                             <tr>

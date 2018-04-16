@@ -54,7 +54,41 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-md-12 m-bot-2">
+      
+        <div class="col-md-4 col-sm-12 col-xs-12" data-anim-type="fade-in-down" data-anim-delay="100">
+            <div class="row">
+                <div class="feature-col-02 sty-01 active" style="height: 150px;padding: 20px;margin: 10px; border-color: white;">
+                    <span class="fa fa-3x fa-money"></span>
+                    <h4 class="uppercase white">Promo</h4>
+                    <p>gunakan kode kupon <strong>abc123</strong> disk. 100k! </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12" data-anim-type="fade-in-down" data-anim-delay="100">
+            <div class="row">
+                <div class="feature-col-02 sty-01 active" style="height: 150px;padding: 20px;margin: 10px; background-color: crimson;border-color: white;">
+                  <span class="fa fa-3x fa-cc-stripe"></span>
+                  <h4 class="uppercase white">pembayaran aman</h4>
+                  <p>tenang pembayaran kami aman!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12" data-anim-type="fade-in-down" data-anim-delay="100">
+            <div class="row">
+                <div class="feature-col-02 sty-01 active" style="height: 150px;padding: 20px;margin: 10px; background-color: #FFA000;border-color: white;">
+                    <span class="fa fa-3x fa-check-circle"></span>
+                    <h4 class="uppercase white">Dijamin untung</h4>
+                    <p>investasi di bareksa tak pernah buntung!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 m-bot-3">
         <div class="col-md-6">
           <div class="dropdown">
             <label for="dropdown" style="margin-right: 10px">Kategori :</label>
@@ -78,7 +112,6 @@
         </div>
       </div>
     </div>
-
     <div class="row">
       <div class="col-12">
 

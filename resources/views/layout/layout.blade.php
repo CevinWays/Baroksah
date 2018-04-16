@@ -138,10 +138,9 @@
             <!-- Social icons -->
             <div class="social-icons bor-light">
               <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.facebook.com/" target="blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/?lang=en" target="blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://id.pinterest.com/" target="blank"><i class="fa fa-pinterest"></i></a></li>
               </ul>
             </div>
             <!-- end: Social icons --> 
@@ -171,21 +170,21 @@
             <h4 class="uppercase f-15 font-bold white m-bot-3">Berita</h4>
             <div class="show-post sty-one"><img src="images/reksadana3.jpg" alt="Image" class="pull-left">
               <div class="post pull-left">
-                <h5><a href="blog-details.html" class="tran3s">Berita Reksadana</a></h5>
+                <h5><a href="{{route('berita.index')}}" class="tran3s">Berita Reksadana</a></h5>
                 <p>21 jan, 2018  /  Business</p>
               </div>
               <!-- /.post --> 
             </div>
             <div class="show-post sty-one"><img src="images/reksadana2.jpg" alt="Image" class="pull-left">
               <div class="post pull-left">
-                <h5><a href="blog-details.html" class="tran3s">Berita Reksadana</a></h5>
+                <h5><a href="{{route('berita.index')}}" class="tran3s">Berita Reksadana</a></h5>
                 <p>13 Feb, 2018  /  Business</p>
               </div>
               <!-- /.post --> 
             </div>
             <div class="show-post sty-one"><img src="images/reksadana1.jpg" alt="Image" class="pull-left">
               <div class="post pull-left">
-                <h5><a href="blog-details.html" class="tran3s">Berita Reksadana</a></h5>
+                <h5><a href="{{route('berita.index')}}" class="tran3s">Berita Reksadana</a></h5>
                 <p>13 Feb, 2018  /  Business</p>
               </div>
               <!-- /.post --> 
