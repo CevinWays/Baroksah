@@ -1,9 +1,41 @@
-@extends('layout.layout') @section('content')
+@extends('layout.layout') 
+@section('content')
 <div class="clearfix"></div>
 <!-- Sub Header -->
 <div class="container">
+    <div class="row">
+        @if (session()->has('success_message'))
+        <div class="alert alert-primary animate-in" data-anim-delay="300" data-anim-type="fade-in-down">
+        <span>
+            <i class="fa fa-thumbs-o-up"></i>
+        </span>
+        {{ session()->get('success_message') }}
+        </div>
+        @endif 
+
+        @if(count($errors) > 0)
+        <div class="alert alert-danger animate-in" data-anim-delay="400" data-anim-type="fade-in-down">
+        {{-- <span><i class="fa fa-info"></i></span> --}}
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li><span class="fa fa-info-circle"></span> {!! $error !!}</li>
+            @endforeach
+        </ul>
+        </div>
+        @endif
+    </div>
+</div>
+
+<div class="container">
   <div class="col-12">
-    <h2>{{$categoryName}}</h2>
+    <div class="row m-bot-2">
+      <div class="col-md-6">
+        <h2>{{$categoryName}}</h2>
+      </div>
+      <div class="col-md-6 m-top-2">
+        @include ('menus.search')
+      </div>
+    </div>
     <nav class="text-right" aria-label="breadcrumb" role="navigation">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">

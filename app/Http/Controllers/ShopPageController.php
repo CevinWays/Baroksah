@@ -37,7 +37,8 @@ class ShopPageController extends Controller
             'categoryName'=>$categoryName,
         ]);
     }
-    public function show($slug){
+    public function show($slug)
+    {
         $product = Product::where('slug',$slug)->firstOrFail();
         $MungkinSuka = Product::where('slug','!=',$slug)->AndaMungkin()->get();
 
@@ -45,5 +46,17 @@ class ShopPageController extends Controller
             'product'=>$product,
             'MungkinSuka'=>$MungkinSuka,
             ]);
+    }
+    public function search(Request $request)
+    {
+        $request->validate([
+            'query' => 'required | min:3',
+
+        ]);
+
+        $query = $request->input('query');
+        $products = Product::where('name','like',"%$query%")->get();
+
+        return view('search-result')->with('products',$products);
     }
 }
