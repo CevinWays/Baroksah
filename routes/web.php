@@ -49,3 +49,6 @@ Route::get('/mailable',function(){
 });
 
 Route::get('/search','ShopPageController@search')->name('search');
+
+Route::get('/profile','UserController@profile')->name('profile');
+Route::post('/profile','UserController@update')->name('profile.update');
