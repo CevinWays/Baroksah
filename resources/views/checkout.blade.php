@@ -130,7 +130,7 @@
           </fieldset>
 
           <footer>
-            <button id="complete-order" type="submit" class="button" style="width: 200px">Pay</button>
+            <button id="complete-order" type="submit" class="button" style="width: 200px">bayar</button>
           </footer>
         </form>
         {{-- end form --}}
