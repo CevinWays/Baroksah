@@ -50,12 +50,12 @@
 
 
 </head>
-<body>
+<body style="background-color: #F5F5F5">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-laravel" style="background-color: rgb(0, 0, 0);">
             <div class="container">
-                <a class="navbar-brand white" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand white f-25" href="{{ url('/') }}">
+                    Baroksah
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
