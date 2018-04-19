@@ -40,7 +40,9 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('auth/activate','Auth\ActivationController@activate')->name('auth.activate');
+
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mailable',function(){
     $order = App\Order::find(1);

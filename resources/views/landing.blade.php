@@ -1,4 +1,5 @@
-@extends('layout.layout') @section('content')
+@extends('layout.layout') 
+@section('content')
 <div class="clearfix"></div>
 <!-- Master Slider -->
 <div>
