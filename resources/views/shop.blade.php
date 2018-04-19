@@ -36,17 +36,16 @@
         @include ('menus.search')
       </div>
     </div>
-    <nav class="text-right" aria-label="breadcrumb" role="navigation">
+    {{-- <nav class="text-right" aria-label="breadcrumb" role="navigation">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="/">Beranda</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">Shop</li>
       </ol>
-    </nav>
+    </nav> --}}
   </div>
 </div>
-<!-- Sub Header -->
 
 <div class="clearfix"></div>
 <!-- end features Section 01 -->
@@ -80,7 +79,7 @@
                 <div class="feature-col-02 sty-01 active" style="height: 150px;padding: 20px;margin: 10px; background-color: #FFA000;border-color: white;">
                     <span class="fa fa-3x fa-check-circle"></span>
                     <h4 class="uppercase white">Dijamin untung</h4>
-                    <p>investasi di bareksa tak pernah buntung!</p>
+                    <p>investasi di baroksah tak pernah buntung!</p>
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@
 <link href="{{URL::asset('js/animations/css/animations.min.css')}}" rel="stylesheet" type="text/css" media="all" />
 
 <!-- Video PopUp -->
-<link rel="stylesheet" type="text/css" href="{{URL::asset('css/YouTubePopUp.css')}}">
+{{-- <link rel="stylesheet" type="text/css" href="{{URL::asset('css/YouTubePopUp.css')}}"> --}}
 
 <!-- forms -->
 <link rel="stylesheet" href="{{URL::asset('js/form/css/sky-forms.css')}}" type="text/css" media="all">
@@ -100,7 +100,7 @@
                       <a href="{{route('cart.index')}}">
                         <li class="right" style="top: 18px">
                             <span class="fa-stack fa-lg has-badge" data-count="{{ Cart::instance('default')->count() }}">
-                              <i class="fa fa-circle fa-stack-2x"></i>
+                              {{-- <i class="fa fa-circle fa-stack-2x"></i> --}}
                               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                             </span>
                         </li>
@@ -239,8 +239,8 @@
 <script src="{{URL::asset('js/scrolltotop/totop.js')}}" type="text/javascript"></script> 
 
 <!-- Video PopUp --> 
-<script type="text/javascript" src="{{URL::asset('js/YouTubePopUp.jquery.js')}}"></script> 
-<script type="text/javascript" src="{{URL::asset('js/YouTube.int.js')}}"></script>
+{{-- <script type="text/javascript" src="{{URL::asset('js/YouTubePopUp.jquery.js')}}"></script> 
+<script type="text/javascript" src="{{URL::asset('js/YouTube.int.js')}}"></script> --}}
 
 <!-- contact form --> 
 <script type="text/javascript" src="{{URL::asset('js/form/jquery.min.js')}}"></script>

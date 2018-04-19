@@ -18,7 +18,7 @@
         data-delay="1400" data-ease="easeOutExpo">Mulailah berinvestasi mulai dini, demi masa depan yang lebih baik.</h3>
       <div class="ms-layer btn5" style="left: 102px; top:500px;" data-type="text" data-effect="bottom(45)" data-duration="1000"
         data-delay="1700" data-ease="easeOutExpo">
-        <a href="{{route('shop.index')}}">
+        <a href="{{route('login')}}">
           <i class="fa fa-angle-right" aria-hidden="true"></i> Investasi Sekarang!</a>
       </div>
       <div class="ms-layer btn6 nodisplay" style="left: 360px; top:500px;" data-type="text" data-effect="bottom(45)" data-duration="1000"
@@ -42,7 +42,7 @@
         <br> Mulailah berinvestasi mulai dini, demi masa depan yang lebih baik</h3>
       <div class="ms-layer btn5 squre" style="left:500px; top: 480px;" data-delay="1400" data-duration="1000" data-effect="right(50)"
         data-ease="easeOutExpo">
-        <a href="{{route('shop.index')}}">
+        <a href="{{route('login')}}">
           <i class="fa fa-angle-right" aria-hidden="true"></i> Investasi Sekarang!</a>
       </div>
       <div class="ms-layer btn6 squre nodisplay" style="left:750px; top: 480px;" data-delay="1400" data-duration="1000" data-effect="right(50)"
@@ -58,7 +58,7 @@
 <div class="section-lg nopadd m-top-10">
   <div class="col-md-12 text-center">
     <div class="m-bot-6">
-      <h1 class="f-35 font-bold uppercase">produk baroksah terbaik</h1>
+      <h1 class="f-35 font-bold uppercase">TOP Best Seller</h1>
       <div class="hr-line blue-color m-bot-2"></div>
       <p>6 produk reksadana terbaik dari baroksah</p>
     </div>
@@ -104,7 +104,7 @@
           oleh OJK sehingga bisa melakukan kegiatan penghimpunan dana dari masyarakat.
         </p>
         <div class="readmore">
-          <a href="{{route('shop.index')}}">
+          <a href="{{route('login')}}">
             <i class="fa fa-angle-right" aria-hidden="true"></i> Investasi sekarang!</a>
         </div>
       </div>
@@ -142,7 +142,7 @@
             <a href="{{route('berita.index')}}">
               <img alt="" src="images/reksadana3.jpg" class="img-responsive"> </a>
             <span class="post-meta-category">
-              <a href="">HOT</a>
+              <a href="{{route('berita.index')}}">HOT</a>
             </span>
           </div>
           <div class="post-item-description">
@@ -173,7 +173,7 @@
                   <a href="{{route('berita.index')}}">
                     <img alt="" src="images/reksadana2.jpg" class="img-responsive"> </a>
                   <span class="post-meta-category">
-                    <a href="">HOT</a>
+                    <a href="{{route('berita.index')}}">HOT</a>
                   </span>
                 </div>
               </div>
@@ -209,7 +209,7 @@
                   <a href="{{route('berita.index')}}">
                     <img alt="" src="images/reksadana1.jpg" class="img-responsive"> </a>
                   <span class="post-meta-category">
-                    <a href="">HOT</a>
+                    <a href="{{route('berita.index')}}">HOT</a>
                   </span>
                 </div>
               </div>
