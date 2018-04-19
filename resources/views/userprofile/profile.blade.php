@@ -49,7 +49,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-12 col-xs-12" data-anim-type="fade-in-down" data-anim-delay="100">
                 <div class="row">
-                    <div class="feature-col-02 sty-01 active" style="height: 150px; padding: 20px; margin: 10px">
+                    <div class="feature-col-02 sty-01 active" style="padding: 20px; margin: 10px">
                         <h4 class="uppercase white" ><span class="fa fa-user"></span> User Information</h4>
                         <table>
                             <tr>
@@ -58,9 +58,19 @@
                                 <td>{{$user->name}}</td>
                             </tr>
                             <tr>
-                                <td>Email</td>
+                                <td>Alamat</td>
                                 <td>:</td>
-                                <td>{{$user->email}}</td>
+                                <td>{{$user->address}}</td>
+                            </tr>
+                            <tr>
+                                <td>Kota</td>
+                                <td>:</td>
+                                <td>{{$user->city}}</td>
+                            </tr>
+                            <tr>
+                                <td>Provinsi</td>
+                                <td>:</td>
+                                <td>{{$user->province}}</td>
                             </tr>
                         </table>
                     </div>
@@ -69,14 +79,29 @@
 
             <div class="col-md-4 col-sm-12 col-xs-12" data-anim-type="fade-in-down" data-anim-delay="100">
                 <div class="row">
-                    <div class="feature-col-02 sty-01 active" style="height: 150px;padding: 20px;margin: 10px;background-color: crimson;border-color: white;">
+                    <div class="feature-col-02 sty-01 active" style="padding: 20px;margin: 10px;background-color: crimson;border-color: white;">
                         <h4 class="uppercase white" ><span class="fa fa-clock-o"></span> Other Information</h4>
                         <table>
+                            <tr>
+                                <td>Kode Pos</td>
+                                <td>:</td>
+                                <td>{{$user->postalcode}}</td>
+                            </tr>
+                            <tr>
+                                <td>No Telp</td>
+                                <td>:</td>
+                                <td>{{$user->phone}}</td>
+                            </tr>
                             <tr>
                                 <td>Member Sejak</td>
                                 <td>:</td>
                                 <td>{{$user->created_at}}</td>
                             </tr>
+                            <tr>
+                                <td>Terakhir Dilihat</td>
+                                <td>:</td>
+                                <td>{{$user->updated_at}}</td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -84,7 +109,7 @@
 
             <div class="col-md-4 col-sm-12 col-xs-12" data-anim-type="fade-in-down" data-anim-delay="100">
                 <div class="row">
-                    <div class="feature-col-02 sty-01 active" style="height: 150px;padding: 20px;margin: 10px; background-color: #FFA000;border-color: white;">
+                    <div class="feature-col-02 sty-01 active" style="padding: 20px;margin: 10px; background-color: #FFA000;border-color: white;">
                         <h4 class="uppercase white" ><span class="fa fa-money"></span> Billing Information</h4>
                         <table>
                             <tr>
@@ -96,6 +121,16 @@
                                 <td>Email</td>
                                 <td>:</td>
                                 <td>{{$user->email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Alamat</td>
+                                <td>:</td>
+                                <td>{{$user->address}}</td>
+                            </tr>
+                            <tr>
+                                <td>No Telp</td>
+                                <td>:</td>
+                                <td>{{$user->phone}}</td>
                             </tr>
                         </table>
                     </div>

@@ -51,8 +51,13 @@
               <section class="col col-6">
                 <label class="label">Name</label>
                 <label class="input">
-                  <i class="icon-append fa fa-user"></i>
-                  <input name="name" id="name" type="text" value="{{ old('name') }}" required>
+                  @if (auth()->user())
+                    <i class="icon-append fa fa-user"></i>
+                    <input name="name" id="name" type="text" value="{{ auth()->user()->name }}" readonly>
+                  @else
+                    <i class="icon-append fa fa-user"></i>
+                    <input name="name" id="name" type="text" value="{{ old('name') }}" required>
+                  @endif
                 </label>
               </section>
               <section class="col col-6">
@@ -62,6 +67,7 @@
                     <i class="icon-append fa fa-envelope-o"></i>
                     <input name="email" id="email" type="email" value="{{ auth()->user()->email }}" readonly>
                   @else
+                    <i class="icon-append fa fa-envelope-o"></i>
                     <input name="email" id="email" type="email" value="{{ old('email') }}" required>
                   @endif
                 </label>
@@ -71,40 +77,65 @@
             <section>
               <label class="label">Address</label>
               <label class="input">
-                <i class="icon-append fa fa-building"></i>
-                <input name="address" id="address" type="text" value="{{ old('address') }}" required>
+                @if (auth()->user())
+                  <i class="icon-append fa fa-building"></i>
+                  <input name="address" id="address" type="text" value="{{ auth()->user()->address }}" readonly>  
+                @else
+                  <i class="icon-append fa fa-building"></i>
+                  <input name="address" id="address" type="text" value="{{ old('address') }}" required>
+                @endif
               </label>
             </section>
 
             <section>
               <label class="label">City</label>
               <label class="input">
-                <i class="icon-append fa fa-building"></i>
-                <input name="city" id="city" type="text" value="{{ old('city') }}" required>
+                @if (auth()->user())
+                  <i class="icon-append fa fa-building"></i>
+                  <input name="city" id="city" type="text" value="{{ auth()->user()->city }}" readonly>  
+                @else
+                  <i class="icon-append fa fa-building"></i>
+                  <input name="city" id="city" type="text" value="{{ old('city') }}" required>
+                @endif
               </label>
             </section>
 
             <section>
               <label class="label">Province</label>
               <label class="input">
-                <i class="icon-append fa fa-building"></i>
-                <input name="province" id="province" type="text" value="{{ old('province') }}" required>
+                @if (auth()->user())
+                  <i class="icon-append fa fa-building"></i>
+                  <input name="province" id="province" type="text" value="{{ auth()->user()->province }}" readonly>    
+                @else
+                  <i class="icon-append fa fa-building"></i>
+                  <input name="province" id="province" type="text" value="{{ old('province') }}" required>
+                @endif
               </label>
             </section>
 
             <section>
               <label class="label">Postal Code</label>
               <label class="input">
-                <i class="icon-append fa fa-tag"></i>
-                <input name="postalcode" id="postalcode" type="text" value="{{ old('postalcode') }}" required>
+                @if (auth()->user())
+                  <i class="icon-append fa fa-tag"></i>
+                  <input name="postalcode" id="postalcode" type="text" value="{{ auth()->user()->postalcode }}" readonly>  
+                @else
+                  <i class="icon-append fa fa-tag"></i>
+                  <input name="postalcode" id="postalcode" type="text" value="{{ old('postalcode') }}" required>
+                @endif
               </label>
             </section>
 
             <section>
               <label class="label">Phone</label>
               <label class="input">
-                <i class="icon-append fa fa-phone"></i>
-                <input name="phone" id="phone" type="text" value="{{ old('phone') }}" required>
+                @if (auth()->user())
+                  <i class="icon-append fa fa-phone"></i>
+                  <input name="phone" id="phone" type="text" value="{{ auth()->user()->phone }}" readonly>    
+                @else
+                  <i class="icon-append fa fa-phone"></i>
+                  <input name="phone" id="phone" type="text" value="{{ old('phone') }}" required>
+                @endif
               </label>
             </section>
 
@@ -130,7 +161,7 @@
           </fieldset>
 
           <footer>
-            <button id="complete-order" type="submit" class="button" style="width: 200px">Pay</button>
+            <button id="complete-order" type="submit" class="button" style="width: 200px">bayar</button>
           </footer>
         </form>
         {{-- end form --}}

@@ -2,7 +2,7 @@
 
 # Pengalihan Nama Reksadana
 
-Terimakasih atas pembelian reksadana di Baroksah
+Terimakasih atas kepercayaan anda terhadap Baroksah
 
 **Order ID:** {{$order->id}} <br>
 **Order Email:** {{$order->billing_email}} <br>
@@ -22,6 +22,6 @@ Ke Baroksah
 
 Terimakasih telah memilih Baroksah
 
-Regrads,<br>
+Salam, Cevin Ways<br>
 {{config('app.name')}}
 @endcomponent
