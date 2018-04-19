@@ -7,7 +7,7 @@
     <!-- slide 1 -->
     <div class="ms-slide slide-1" data-delay="14">
       <!-- slide background -->
-      <img src="masterslider/blank.gif" data-src="{{URL::asset('images/masterslider/img3_3.jpg')}}" alt="Slide1 background" style="opacity: 0.5;"
+      <img src="masterslider/blank.gif" data-src="{{URL::asset('images/reksadana-bg1.jpg')}}" alt="Slide1 background" style="opacity: 0.5;"
       />
       <h3 class="ms-layer title2 white" style="left:100px;top:240px;" data-type="text" data-effect="bottom(45)" data-duration="1000"
         data-delay="800" data-ease="easeOutExpo">Baroksah</h3>
