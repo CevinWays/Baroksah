@@ -93,7 +93,7 @@
                       <li><a href="{{route('shop.index')}}">Beli Produk</a><span class="arrow"></span></li>
                       @guest
                       @else
-                      <li><a href="#">Jual Produk</a><span class="arrow"></span></li>
+                      <li><a href="{{route('jual.index')}}">Jual Produk</a><span class="arrow"></span></li>
                       @endguest
                       <li class="right"> <a href="{{route('berita.index')}}" class="m-link">Berita</a> <span class="arrow"></span></li>
                       <li class="right"> <a href="{{route('tentang.index')}}" class="m-link">Tentang</a> <span class="arrow"></span></li>
