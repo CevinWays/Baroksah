@@ -40,7 +40,9 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('auth/activate','Auth\ActivationController@activate')->name('auth.activate');
+
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mailable',function(){
     $order = App\Order::find(1);
@@ -54,3 +56,7 @@ Route::get('/profile','UserController@profile')->name('profile');
 Route::post('/profile','UserController@update')->name('profile.update');
 Route::get('/berita','BeritaController@index')->name('berita.index');
 Route::get('/tentang','TentangController@index')->name('tentang.index');
+
+Route::get('/jual','JualController@index')->name('jual.index')->middleware('auth');
+Route::post('/jual','JualController@store')->name('jual.store');
+Route::delete('/jual/{product}', 'JualController@destroy')->name('jual.destroy');
