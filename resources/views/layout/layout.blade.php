@@ -4,10 +4,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <title>{{config('app.name')}}</title>
 
-<!-- Google Font -->
+<!-- Google Font popins -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
 <!-- Bootstrap CSS -->
@@ -31,14 +30,8 @@
 <!-- Mega Menu -->
 <link rel="stylesheet" href="{{URL::asset('js/megamenu/stylesheets/screen.css')}}">
 
-<!-- load css for cubeportfolio -->
-<link rel="stylesheet" type="text/css" href="{{URL::asset('js/cubeportfolio/css/cubeportfolio.min.css')}}">
-
 <!-- Animations -->
 <link href="{{URL::asset('js/animations/css/animations.min.css')}}" rel="stylesheet" type="text/css" media="all" />
-
-<!-- Video PopUp -->
-<link rel="stylesheet" type="text/css" href="{{URL::asset('css/YouTubePopUp.css')}}">
 
 <!-- forms -->
 <link rel="stylesheet" href="{{URL::asset('js/form/css/sky-forms.css')}}" type="text/css" media="all">
@@ -54,7 +47,9 @@
     <div class="top-bar solid-dark">
       <div class="container">
         <div class="row">
-          <div class="col-md-6"><i class="fa fa-envelope-o"></i> baroksah@baroksah.com <span>|</span> <i class="fa fa-phone"></i> 082233928872</div>
+          <div class="col-md-6">
+            <i class="fa fa-envelope-o"></i> baroksah@baroksah.com <span>|</span> <i class="fa fa-phone"></i> 082233928872
+          </div>
           <div class="col-md-6 right-padd0 text-right social-media">
             @guest
             <a href="{{ route('login') }}"><span class="fa fa-user"></span>Masuk</a> 
@@ -83,13 +78,22 @@
       <div class="container">
         <div class="mod-menu">
           <div class="row">
-            <div class="col-sm-2"> <a href="{{route('landing-page')}}" title="" class="logo"> <img src="{{URL::asset('images/logo_baroksah.png')}}" alt=""> </a> </div>
+            <div class="col-sm-2"> 
+              <a href="{{route('landing-page')}}" title="" class="logo"> 
+                <img src="{{URL::asset('images/logo_baroksah.png')}}" alt=""> 
+              </a> 
+            </div>
             <div class="col-sm-10">
               <div class="main-nav">
                 <div id="menu" class="collapse">
                   <ul class="nav navbar-nav">
                     @if (! (request()->is('checkout') || request()->is('guestCheckout')) )
-                      <li> <a href="{{route('landing-page')}}">Beranda</a> <span class="arrow"></span></li>
+                      @include ('menus.search')
+                      @guest 
+                      @endguest
+                    @endif
+                    <li><a href="{{route('landing-page')}}">Beranda</a> <span class="arrow"></span></li>
+                    @if (! (request()->is('checkout') || request()->is('guestCheckout')) )
                       <li><a href="{{route('shop.index')}}">Beli Produk</a><span class="arrow"></span></li>
                       @guest
                       @else
@@ -100,13 +104,12 @@
                       <a href="{{route('cart.index')}}">
                         <li class="right" style="top: 18px">
                             <span class="fa-stack fa-lg has-badge" data-count="{{ Cart::instance('default')->count() }}">
-                              <i class="fa fa-circle fa-stack-2x"></i>
                               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                             </span>
                         </li>
                       </a>
                     @endif
-                    </ul>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -120,6 +123,7 @@
   {{-- start content here!! --}}
   @yield('content')
   {{-- end content --}}
+
   {{-- start footer here --}}
   <div class="clearfix"></div>
   <footer class="footer black-bg">
@@ -168,21 +172,21 @@
           <div class="col-md-4 m-bot-2"> 
             <!-- Footer widget area 2 -->
             <h4 class="uppercase f-15 font-bold white m-bot-3">Berita</h4>
-            <div class="show-post sty-one"><img src="images/reksadana3.jpg" alt="Image" class="pull-left">
+            <div class="show-post sty-one"><img src="{{URL::asset('images/reksadana2.jpg')}}" alt="Image" class="pull-left">
               <div class="post pull-left">
                 <h5><a href="{{route('berita.index')}}" class="tran3s">Berita Reksadana</a></h5>
                 <p>21 jan, 2018  /  Business</p>
               </div>
               <!-- /.post --> 
             </div>
-            <div class="show-post sty-one"><img src="images/reksadana2.jpg" alt="Image" class="pull-left">
+            <div class="show-post sty-one"><img src="{{URL::asset('images/reksadana3.jpg')}}" alt="Image" class="pull-left">
               <div class="post pull-left">
                 <h5><a href="{{route('berita.index')}}" class="tran3s">Berita Reksadana</a></h5>
                 <p>13 Feb, 2018  /  Business</p>
               </div>
               <!-- /.post --> 
             </div>
-            <div class="show-post sty-one"><img src="images/reksadana1.jpg" alt="Image" class="pull-left">
+            <div class="show-post sty-one"><img src="{{URL::asset('images/reksadana1.jpg')}}" alt="Image" class="pull-left">
               <div class="post pull-left">
                 <h5><a href="{{route('berita.index')}}" class="tran3s">Berita Reksadana</a></h5>
                 <p>13 Feb, 2018  /  Business</p>
@@ -199,7 +203,6 @@
       </div>
     </div>
   </footer>
-  <!-- end features Section 10 -->
   {{-- End footer --}}
   <div class="clearfix"></div>
 </div>
@@ -238,14 +241,15 @@
 <!-- Scroll Up --> 
 <script src="{{URL::asset('js/scrolltotop/totop.js')}}" type="text/javascript"></script> 
 
-<!-- Video PopUp --> 
-<script type="text/javascript" src="{{URL::asset('js/YouTubePopUp.jquery.js')}}"></script> 
-<script type="text/javascript" src="{{URL::asset('js/YouTube.int.js')}}"></script>
-
 <!-- contact form --> 
 <script type="text/javascript" src="{{URL::asset('js/form/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/form/jquery.form.min.js')}}"></script> 
 <script type="text/javascript" src="{{URL::asset('js/form/jquery.validate.min.js')}}"></script>
+
+<!-- Chartjs JavaScript --> 
+{{-- <script type="text/javascript" src="{{URL::asset('js/chartjs/chart.min.js')}}"></script> 
+<script type="text/javascript" src="{{URL::asset('js/chartjs/chart-int.js')}}"></script> --}}
+
 
 @yield('extra-js')
 

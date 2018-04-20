@@ -2,7 +2,7 @@
 @section('content')
 <div class="clearfix"></div>
 <!-- Sub Header -->
-<div class="container">
+<div class="container m-top-1">
     <div class="row">
         @if (session()->has('success_message'))
         <div class="alert alert-primary animate-in" data-anim-delay="300" data-anim-type="fade-in-down">
@@ -28,15 +28,12 @@
 
 <div class="container">
     <div class="col-12">
-        <div class="row m-bot-2">
+        {{-- <div class="row m-bot-2">
             <div class="col-md-6">
                 <h2>{{$product->name}}</h2>
             </div>
-            <div class="col-md-6 m-top-2">
-                @include ('menus.search')
-            </div>
-        </div>
-        <nav class="text-right" aria-label="breadcrumb" role="navigation">
+        </div> --}}
+        <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="/">Beranda</a>
@@ -49,6 +46,7 @@
         </nav>
     </div>
 </div>
+
 <!-- Sub Header -->
 <div class="clearfix"></div>
 <div class="section-md">
@@ -78,6 +76,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="row">
+            
+                @include('menus.chartjs')
+            
         </div>
         
         <h3>Anda Mungkin Suka</h3>
