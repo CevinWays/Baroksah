@@ -1379,6 +1379,7 @@ figure img.wid60 {
 	z-index: 100;
 	background: url(../images/img-51.png) left top repeat;
 	transition: top .3s ease-in-out;
+	background-color: #212121;
 }
 .img-hover-st-4 .text h3 {
 	color: #fff;
