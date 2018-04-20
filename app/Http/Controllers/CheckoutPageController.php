@@ -71,7 +71,7 @@ class CheckoutPageController extends Controller
             Mail::send(new OrderPlaced($order));
 
             // SUCCESSFUL
-            Cart::instance('default')->destroy();
+            // Cart::instance('default')->destroy();
             session()->forget('coupon');
 
             return redirect()->route('thankyou.index')->with('success_message', 'Terimakasih pembayaran anda telah berhasil!');

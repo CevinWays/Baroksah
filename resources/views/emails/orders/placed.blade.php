@@ -9,16 +9,12 @@ Terimakasih atas kepercayaan anda terhadap Baroksah
 **Order Nama Pembayar:** {{$order->billing_name}} <br>
 **Order Total:** Rp.{{$order->billing_total}} <br>
 
-**Detail Produk Yang dibeli** <br>
+**Detail Produk** <br>
 @foreach ($order->products as $product)
 Nama: {{$product->name}} <br>
 Harga: Rp.{{$product->price}} <br>
 Jumlah: {{$product->pivot->quantity}} <br>
 @endforeach
-
-@component('mail::button',['url'=>config('app.url'),'color'=>'green'])
-Ke Baroksah
-@endcomponent
 
 Terimakasih telah memilih Baroksah
 

@@ -2,7 +2,7 @@
 @section('content')
 <div class="clearfix"></div>
 <!-- Sub Header -->
-<div class="container">
+<div class="container m-top-1">
     <div class="row">
         @if (session()->has('success_message'))
         <div class="alert alert-primary animate-in" data-anim-delay="300" data-anim-type="fade-in-down">
@@ -42,7 +42,7 @@
 <div class="section-md">
     <div class="container">
         @if (Cart::count() > 0)
-        <h4>({{ Cart::count() }}) item di keranjang anda</h4>
+        <h4>{{ Cart::count() }} item di keranjang anda</h4>
         @foreach (Cart::content() as $item)
         <div class="card m-bot-2" style="box-shadow: 0 4px 8px 0 #BDBDBD; border-color: white">
             <div class="card-body">
@@ -62,7 +62,7 @@
                             <form action="{{ route('cart.switchToSaveForLater', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }}
 
-                                <button type="submit" class="btn btn-rounded btn-success">Save for later</button>
+                                <button type="submit" class="btn btn-rounded btn-success">Simpan nanti</button>
                             </form>
                         </div>
                         <div class="col-md-2 text-right">
@@ -89,7 +89,7 @@
                                 <td>{{presentPrice(Cart::subtotal())}}</td>
                             </tr>
                             <tr>
-                                <td>Tax (Pajak 13%)</td>
+                                <td>Pajak 13%</td>
                                 <td>:</td>
                                 <td>{{presentPrice(Cart::tax())}}</td>
                             </tr>
@@ -123,7 +123,7 @@
             <hr>
         </div>
         @endif @if (Cart::instance('saveForLater')->count() > 0)
-        <h4>({{ Cart::instance('saveForLater')->count() }}) item di Save Later</h4>
+        <h4>{{ Cart::instance('saveForLater')->count() }} item di Simpan Nanti</h4>
         @foreach (Cart::instance('saveForLater')->content() as $item)
         <div class="card m-bot-2" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white">
             <div class="card-body">
@@ -143,7 +143,7 @@
                             <form action="{{ route('saveForLater.switchToCart', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }}
 
-                                <button type="submit" class="btn btn-rounded btn-success">Move to Cart</button>
+                                <button type="submit" class="btn btn-rounded btn-success">Ke keranjang</button>
                             </form>
                         </div>
                         <div class="col-md-2 text-right">
@@ -161,7 +161,7 @@
         @endforeach @else
         <div class="row pad-20 text-center">
             <span class="fa fa-3x fa-bookmark"></span>
-            <h4>Anda tidak punya item di save later</h4>
+            <h4>Anda tidak punya item di Simpan Nanti</h4>
         </div>
         @endif
     </div>

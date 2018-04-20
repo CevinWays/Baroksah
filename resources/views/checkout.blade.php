@@ -1,11 +1,12 @@
 @extends('layout.layout') 
 @section('extra-css')
-
-<script src="https://js.stripe.com/v3/"></script> @endsection @section('content')
+<script src="https://js.stripe.com/v3/"></script> 
+@endsection 
+@section('content')
 <div class="clearfix"></div>
 <!-- Sub Header -->
 
-<div class="container">
+<div class="container m-top-1">
   <div class="row">
     @if (session()->has('success_message'))
     <div class="alert alert-primary animate-in" data-anim-delay="300" data-anim-type="fade-in-down">
@@ -44,7 +45,7 @@
       <div class="col-md-6">
         <h2 class="uppercase">Billing Details</h2>
 
-        <form action="{{route('checkout.store')}}" method="POST" id="payment-form" class="sky-form sty-one" sty-one>
+        <form action="{{route('checkout.store','jual.store')}}" method="POST" id="payment-form" class="sky-form sty-one" sty-one>
           {{ csrf_field() }}
           <fieldset class="sty-one">
             <div class="row">
@@ -267,7 +268,8 @@
     </div>
   </div>
 </div>
-@endsection @section('extra-js')
+@endsection 
+@section('extra-js')
 <script>
   (function () {
     // Create a Stripe client.
@@ -361,4 +363,5 @@
       form.submit();
     }
   })();
-</script> @endsection
+</script> 
+@endsection

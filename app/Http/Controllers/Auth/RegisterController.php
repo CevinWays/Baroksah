@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use App\Events\Auth\UserActivationEmail;
 
 class RegisterController extends Controller
 {
@@ -72,6 +74,25 @@ class RegisterController extends Controller
             'postalcode' => $data['postalcode'],
             'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
+            'active' => false,
+            'activation_token' => str_random(191),
         ]);
+    }
+
+    /**
+     * The user has been registered.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function registered(Request $request, $user)
+    {
+        // kirim ke email
+        event(new UserActivationEmail($user));
+
+        $this->guard()->logout();
+
+        return redirect()->route('login')->with('success_message','Daftar Akun berhasil, Silahkan Cek email anda');
     }
 }

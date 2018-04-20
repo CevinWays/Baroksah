@@ -52,7 +52,7 @@
 </head>
 <body style="background-color: #F5F5F5">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-laravel" style="background-color: rgb(0, 0, 0);">
+        <nav class="navbar-expand-md navbar-laravel" style="background-color: rgb(0, 0, 0); box-shadow: 0 5px 9px 0 #BDBDBD;">
             <div class="container">
                 <a class="navbar-brand white f-25" href="{{ url('/') }}">
                     Baroksah
@@ -74,8 +74,10 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
+        <div class="container">
+            @include('layouts.partials._alerts')
+        </div>
+        <main class="py-5">
             @yield('content')
         </main>
     </div>
