@@ -99,12 +99,12 @@ h4 {
 	color: #909090;
 }
 .top-bar.solid-color {
-	background-color: #25d5b2;
+	background-color: #26A69A;
 	height: 5px;
 	padding: 0;
 }
 .top-bar.solid-dark {
-	background-color: #04dbc0;
+	background-color: #26A69A;
 	padding: 10px 0;
 	font-size: 13px;
 	color: #fff;
@@ -575,7 +575,7 @@ ul.plan-list.two li:last-child {
 	text-transform: uppercase;
 	padding: 15px 30px 15px 30px;
 	border-radius: 4px;
-	background-color: #25d5b2;
+	background-color: #26A69A;
 	transition: all 0.3s ease;
 }
 .readmore:hover a {
@@ -606,11 +606,11 @@ ul.plan-list.two li:last-child {
 	padding: 15px 25px 15px 25px;
 	border-radius: 30px;
 	background-color: transparent;
-	border: solid 1px #25d5b2;
-	color: #25d5b2;
+	border: solid 1px #26A69A;
+	color: #26A69A;
 }
 .readmore.out-lined a:hover {
-	background-color: #25d5b2;
+	background-color: #26A69A;
 	color: #fff;
 }
 .readmore.plain {
@@ -627,12 +627,12 @@ ul.plan-list.two li:last-child {
 .div-line {
 	width: 35px;
 	height: 2px;
-	background: #25d5b2;
+	background: #26A69A;
 }
 .div-line-50 {
 	width: 50px;
 	height: 2px;
-	background: #25d5b2;
+	background: #26A69A;
 }
 .feature-col-02 img {
 	width: 420px;
@@ -660,8 +660,8 @@ ul.plan-list.two li:last-child {
 	line-height: 30px;
 }
 .box-col::before {
-	border-left: 1px solid #25d5b2;
-	border-right: 1px solid #25d5b2;
+	border-left: 1px solid #26A69A;
+	border-right: 1px solid #26A69A;
 	content: "";
 	height: 0;
 	left: 0;
@@ -671,8 +671,8 @@ ul.plan-list.two li:last-child {
 	z-index: -1;
 }
 .box-col::after {
-	border-bottom: 1px solid #25d5b2;
-	border-top: 1px solid #25d5b2;
+	border-bottom: 1px solid #26A69A;
+	border-top: 1px solid #26A69A;
 	content: "";
 	height: 100%;
 	left: 50%;
@@ -706,7 +706,7 @@ ul.plan-list.two li:last-child {
 	border-radius: 0;
 }
 .newsletter-form .form button {
-	background-color: #25d5b2;
+	background-color: #26A69A;
 	width: 40px;
 	height: 40px;
 	color: #fff;
@@ -753,7 +753,7 @@ ul.plan-list.two li:last-child {
 	top: 50%;
 	width: 50px;
 	height: 2px;
-	background: #25d5b2;
+	background: #26A69A;
 }
 .sec-title h2::before {
 	right: 100%;
@@ -851,7 +851,7 @@ ul.plan-list.two li:last-child {
 	border-bottom: solid 3px #e3e3e3;
 }
 .tab-sty-01 .nav-tabs > li.active > a, .tab-sty-01 .nav-tabs > li.active:hover > a {
-	border-bottom: solid 3px #25d5b2;
+	border-bottom: solid 3px #26A69A;
 }
 /* Counters 
  ------------------------------ */
@@ -862,7 +862,7 @@ ul.plan-list.two li:last-child {
 	width: 100%;
 }
 .counters.color-bg {
-	background: #25d5b2;
+	background: #26A69A;
 	padding: 100px 0 80px 0;
 }
 .counters.bg-gradient {
@@ -875,7 +875,7 @@ ul.plan-list.two li:last-child {
 }
 .counters .count-icon {
 	font-size: 35px;
-	color: #25d5b2;
+	color: #26A69A;
 	width: 100%;
 }
 .counters .count-nos {
@@ -910,30 +910,30 @@ ul.plan-list.two li:last-child {
 	bottom: -45px;
 }
 .carousel-indicators li {
-	background: #25d5b2 none repeat scroll 0 0;
-	border-color: #25d5b2;
+	background: #26A69A none repeat scroll 0 0;
+	border-color: #26A69A;
 	border-radius: 100%;
 	height: 10px;
 	margin: 0;
 	width: 10px;
 }
 .carousel-indicators.white-color li {
-	background: #25d5b2 none repeat scroll 0 0;
-	border-color: #25d5b2;
+	background: #26A69A none repeat scroll 0 0;
+	border-color: #26A69A;
 }
 .carousel-indicators .active, .carousel-indicators.white-color .active {
 	background: #fff none repeat scroll 0 0;
-	border: solid 1px #25d5b2;
+	border: solid 1px #26A69A;
 	height: 10px;
 	margin: 0;
 	width: 10px;
 }
 .carousel-indicators.style-black li {
-	background: #25d5b2 none repeat scroll 0 0;
-	border-color: #25d5b2;
+	background: #26A69A none repeat scroll 0 0;
+	border-color: #26A69A;
 }
 .carousel-indicators.style-black .active, .carousel-indicators.style-black .active {
-	background: #25d5b2 none repeat scroll 0 0;
+	background: #26A69A none repeat scroll 0 0;
 	border: 0 none;
 	height: 10px;
 	margin: 0;
@@ -969,16 +969,16 @@ ul.plan-list.two li:last-child {
 	top: 100%;
 }
 blockquote.sty-one {
-	border-left: 5px solid #25d5b2;
+	border-left: 5px solid #26A69A;
 }
 blockquote.sty-two {
-	border-left: 5px solid #25d5b2;
+	border-left: 5px solid #26A69A;
 	background: #000;
 	color: #FFF;
 }
 blockquote.sty-three {
 	border-left: 5px solid #000;
-	background: #25d5b2;
+	background: #26A69A;
 	color: #FFF;
 }
 .box-testimony blockquote.no-padding {
@@ -1004,7 +1004,7 @@ blockquote.sty-three {
 	color: #fff;
 }
 .box-testimony.sty-one blockquote {
-	background: #25d5b2;
+	background: #26A69A;
 	border-left: medium none;
 	border-radius: 7px;
 	font-size: 20px;
@@ -1016,7 +1016,7 @@ blockquote.sty-three {
 .box-testimony.sty-one blockquote::after {
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-	border-top: 10px solid #25d5b2;
+	border-top: 10px solid #26A69A;
 	content: "";
 	left: 40px;
 	position: absolute;
@@ -1054,10 +1054,10 @@ figure img.wid60 {
 	display: block;
 	font-size: 14px;
 	font-weight: 400 !important;
-	color: #25d5b2;
+	color: #26A69A;
 }
 .box-testimony .author.balck-text .subtext {
-	color: #25d5b2;
+	color: #26A69A;
 }
 .box-testimony .testi-info {
 	font-size: 20px;
@@ -1065,7 +1065,7 @@ figure img.wid60 {
 	line-height: 30px;
 }
 .author.v-line {
-	border-left: solid 3px #25d5b2;
+	border-left: solid 3px #26A69A;
 	float: left;
 	margin: 0;
 	padding: 5px 0 5px 15px;
@@ -1746,7 +1746,7 @@ figure img.wid60 {
 	color: #FFF;
 }
 .alert-primary, .bg-primary {
-	background: #25d5b2;
+	background: #26A69A;
 }
 .alert-secondary, .bg-secondary, .btn-secondary {
 	background: #3cbcd2;
@@ -2190,7 +2190,7 @@ ul.pagenation-list li a:hover {
 }
 .social-media a:hover {
 	font-size: 12px;
-	color: #25d5b2;
+	color: #26A69A;
 }
 ul.social-icons {
 	margin:20px 0 0 0;
@@ -2465,7 +2465,7 @@ ul.social-icons.sty-six.border li a:hover i {
 	background: #000;
 }
 .footer.sea-bg {
-	background: #25d5b2;
+	background: #26A69A;
 }
 .footer.bg-image {
 	background: url("../images/parallax-bg-07.jpg") no-repeat fixed center bottom / cover;
@@ -2543,7 +2543,7 @@ ul.social-icons.sty-six.border li a:hover i {
 }
 .social-icons ul li:hover i {
 	animation: 0.3s ease 0s normal forwards 1 running toTopFromBottom;
-	color: #25d5b2;
+	color: #26A69A;
 }
 @keyframes toTopFromBottom {
 49% {
@@ -2699,8 +2699,8 @@ ul.address-info li {
 	line-height: 37px;
 }
 .pagination.style-2 > li > a:hover, .pagination.style-2 > li > span:hover, .pagination.style-2 > li > a.active {
-	background-color: #25d5b2;
-	border-color: #25d5b2;
+	background-color: #26A69A;
+	border-color: #26A69A;
 	color: #fff;
 }
 .pagination.style-2 > li:first-child > a, .pagination.style-2 > li:last-child > a {
@@ -2709,7 +2709,7 @@ ul.address-info li {
 	color: #3b3b3b;
 }
 .pagination.style-2 > li:first-child > a:hover, .pagination.style-2 > li:last-child > a:hover {
-	color: #25d5b2;
+	color: #26A69A;
 }
 /* pagenation style 3
  ------------------------------ */
@@ -2793,8 +2793,8 @@ ul.address-info li {
  ------------------------------ */
 .pagination.hover-red > li > a:hover, .pagination.hover-red > li > span:hover, .pagination.hover-red > li > a.active {
 	color: #fff;
-	border-color: #25d5b2;
-	background-color: #25d5b2;
+	border-color: #26A69A;
+	background-color: #26A69A;
 }
 .pagination.hover-green > li > a:hover, .pagination.hover-green > li > span:hover, .pagination.hover-green > li > a.active {
 	color: #fff;
@@ -2880,7 +2880,7 @@ ul.address-info li {
 	color: #000
 }
 .color-sea {
-	color: #25d5b2;
+	color: #26A69A;
 }
 .color-blue {
 	color: #1696e7;
@@ -2898,7 +2898,7 @@ ul.address-info li {
 	background: #f3f3f3;
 }
 .bg-sea-color {
-	background: #25d5b2;
+	background: #26A69A;
 }
 .bg-light-blue {
 	background: #3cbcd2;
@@ -2913,9 +2913,9 @@ ul.address-info li {
 	transition: all 0.3s ease 0s;
 }
 .bg-border:hover, .bg-border.active {
-	border: solid 1px #25d5b2;
+	border: solid 1px #26A69A;
 	border-left: 0;
-	background: #25d5b2;
+	background: #26A69A;
 	color: #FFF;
 }
 /*progress bars */
@@ -3139,7 +3139,7 @@ ul.address-info li {
 	right: 20px;
 	display: none;
 	text-indent: -9999px;
-	background: #25d5b2 url(../images/scroll-top-arrow.png) no-repeat 15px 16px;
+	background: #26A69A url(../images/scroll-top-arrow.png) no-repeat 15px 16px;
 	z-index: 999;
 	border-radius: 5px;
 }
