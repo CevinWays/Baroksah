@@ -64,6 +64,7 @@
                             <h4>{{$product->slug}}</h4>
                             <p>YTD : {{$product->ytd}}</p>
                             <p>Reksadana {{$product->kategori}}</p>
+                            <p>Rating : {{$product->rating}}</p>
                         </div>
                         <div class="col-md-2">
                             <h4>{{$product->presentPrice()}}</h4>
@@ -94,11 +95,12 @@
                 <div class="col-img-hover" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white" >
                     <div class="img-hover-st-4">
                         <div class="text center">
-                            <a class="btn btn-sm btn-outline-primary" style="color: white" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a>
+                            <a class="btn btn-md btn-outline-primary" style="color: white" href="{{route('shop.show',$MungkinAnda->slug)}}">{{$MungkinAnda->presentPrice()}}</a>
                             <br>
                             <h3 class="uppercase">{{$MungkinAnda->slug}}</h3>
                             <p>{{$MungkinAnda->name}}</p>
-                            <p>YTD : {{$product->ytd}}</p>
+                            <p>YTD : {{$MungkinAnda->ytd}}</p>
+                            <p>Rating : {{$MungkinAnda->rating}}</p>
                         </div>
                         <div class="imgbox img-responsive">
                             <img src="{{asset('storage/'.$MungkinAnda->image)}}" alt="Card images" class="img-responsive">

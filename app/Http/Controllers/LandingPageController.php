@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class LandingPageController extends Controller
 {
     public function index(){
-        
-        $products = Product::inRandomOrder()->take(6)->get();
+
+        $products = Product::where('rating', 5)->get();
         return view('landing')->with('products',$products);
     }
 }
