@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('slug')->unique();
             $table->string('ytd')->nullable();
             $table->string('kategori')->nullable();
+            $table->integer('rating')->nullable();
             $table->integer('price');
             $table->timestamps();
         });
