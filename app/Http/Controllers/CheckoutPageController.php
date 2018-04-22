@@ -65,13 +65,11 @@ class CheckoutPageController extends Controller
                 ],
             ]);
 
-            // $this->addToOrdersTables($request,null);
-            // Mail::send(new OrderPlaced);
             $order = $this->addToOrdersTables($request, null);
             Mail::send(new OrderPlaced($order));
 
             // SUCCESSFUL
-            // Cart::instance('default')->destroy();
+            Cart::instance('default')->destroy();
             session()->forget('coupon');
 
             return redirect()->route('thankyou.index')->with('success_message', 'Terimakasih pembayaran anda telah berhasil!');
@@ -115,14 +113,15 @@ class CheckoutPageController extends Controller
         return $order;
     }
 
-    private function getNumbers(){
+    private function getNumbers()
+    {
         $tax = config('cart.tax')/100;
         $discount = session()->get('coupon')['discount']??0;
+        $code = session()->get('coupon')['name'] ?? null;
+        $newSubtotal=(Cart::subtotal() - $discount);
         if ($newSubtotal < 0) {
             $newSubtotal = 0;
         }
-        $code = session()->get('coupon')['name'] ?? null;
-        $newSubtotal=(Cart::subtotal() - $discount);
         $newTax = $newSubtotal * $tax;
         $newTotal = $newSubtotal * (1+$tax);
 
