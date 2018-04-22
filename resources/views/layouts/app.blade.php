@@ -46,7 +46,7 @@
     <link rel="stylesheet" type="text/css" href="{{URL::asset('js/cubeportfolio/css/cubeportfolio.min.css')}}">
 
     <!-- Animations -->
-    <link href="{{URL::asset('js/animations/css/animations.min.css')}}" rel="stylesheet" type="text/css" media="all" />
+    {{-- <link href="{{URL::asset('js/animations/css/animations.min.css')}}" rel="stylesheet" type="text/css" media="all" /> --}}
 
 
 </head>
