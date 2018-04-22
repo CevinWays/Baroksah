@@ -55,6 +55,7 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr>
+                                <th>Images</th>
                                 <th>Nama Produk</th>
                                 <th>YTD</th>
                                 <th>Harga</th>
@@ -64,6 +65,7 @@
                         <tbody>
                             @foreach ($products as $product)
                             <tr>
+                                <td><img src="{{asset('storage/'.$product->image)}}" alt="Card images" class="img-responsive"></td>
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->ytd }}  </td>
                                 <td>{{ $product->presentPrice() }}</td>

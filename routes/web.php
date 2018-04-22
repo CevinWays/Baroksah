@@ -56,6 +56,7 @@ Route::get('/profile','UserController@profile')->name('profile');
 Route::post('/profile','UserController@update')->name('profile.update');
 Route::get('/berita','BeritaController@index')->name('berita.index');
 Route::get('/tentang','TentangController@index')->name('tentang.index');
+Route::post('/tentang','TentangController@store')->name('tentang.store');
 
 Route::get('/jual','JualController@index')->name('jual.index')->middleware('auth');
 Route::post('/jual','JualController@store')->name('jual.store');

@@ -2,6 +2,30 @@
 @section('content')
 <div class="clearfix"></div>
 <!-- Sub Header -->
+<div class="container m-top-1">
+    <div class="row">
+        @if (session()->has('success_message'))
+        <div class="alert alert-primary animate-in" data-anim-delay="300" data-anim-type="fade-in-down">
+        <span>
+            <i class="fa fa-thumbs-o-up"></i>
+        </span>
+        {{ session()->get('success_message') }}
+        </div>
+        @endif 
+
+        @if(count($errors) > 0)
+        <div class="alert alert-danger animate-in" data-anim-delay="400" data-anim-type="fade-in-down">
+        {{-- <span><i class="fa fa-info"></i></span> --}}
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li><span class="fa fa-info-circle"></span> {!! $error !!}</li>
+            @endforeach
+        </ul>
+        </div>
+        @endif
+    </div>
+</div>
+
 <div class="container m-top-2">
   <div class="col-12">
     <div class="section-md">
@@ -30,22 +54,24 @@
               </div>
               <!-- end section -->
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 m-bot-2">
               <h2 class="uppercase m-bottom2">Lokasi</h2>
               <div class="googlemaps embed-container maps">
                 <div id="map" style="width:750px;height:450px;"></div>
               </div>        
             </div>
             <!-- end section -->
-
+            @if (! (request()->is('checkout') || request()->is('guestCheckout')) )
+              @guest
+              @else
             <div class="col-md-12 m-top-4">
-              <h2 class="uppercase m-bot-2">Feedback</h2>
+              <h2 class="uppercase m-bot-2">Masukan</h2>
 
-              <form action="demo-contacts-process.php" method="post" id="sky-form" class="sky-form sty-one">
+              <form action="{{route('tentang.store')}}" method="post" id="sky-form" class="sky-form sty-one">
                 <fieldset class="sty-one">
                   <div class="row">
                     <section class="col col-6">
-                      <label class="label">Name</label>
+                      <label class="label">Nama</label>
                       <label class="input">
                         <i class="icon-append fa fa-user"></i>
                         <input type="text" name="name" id="name">
@@ -67,27 +93,15 @@
                     </label>
                   </section>
                   <section>
-                    <label class="label">Message</label>
+                    <label class="label">Pesan</label>
                     <label class="textarea">
                       <i class="icon-append fa fa-comment"></i>
                       <textarea rows="4" name="message" id="message"></textarea>
                     </label>
                   </section>
-                  <section>
-                    <label class="label">Enter characters below:</label>
-                    <label class="input input-captcha">
-                      <img src="captcha/image.php?1523870830" width="100" height="35" alt="Captcha image" />
-                      <input type="text" maxlength="6" name="captcha" id="captcha">
-                    </label>
-                  </section>
-                  <section>
-                    <label class="checkbox">
-                      <input type="checkbox" name="copy">
-                      <i></i>Send a copy to my e-mail address</label>
-                  </section>
                 </fieldset>
                 <footer>
-                  <button type="submit" class="button">Send message</button>
+                  <button type="submit" class="button">Kirim</button>
                 </footer>
                 <div class="message">
                   <i class="fa fa-check"></i>
@@ -96,6 +110,9 @@
               </form>
 
             </div>
+            @endguest
+    
+            @endif
             <!-- end section -->
           </div>
       </div>
