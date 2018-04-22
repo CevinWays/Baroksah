@@ -103,7 +103,8 @@
                       <li class="right"> <a href="{{route('tentang.index')}}" class="m-link">Tentang</a> <span class="arrow"></span></li>
                       <a href="{{route('cart.index')}}">
                         <li class="right" style="top: 18px">
-                            <span class="fa-stack fa-lg has-badge" data-count="{{ Cart::instance('default')->count() }}">
+                            {{-- <span class="fa-stack fa-lg has-badge" data-count="{{ Cart::instance('default')->count() }}"> --}}
+                            <span class="fa-stack fa-lg has-badge">
                               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                             </span>
                         </li>

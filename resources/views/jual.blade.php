@@ -2,7 +2,7 @@
 @section('content')
 <div class="clearfix"></div>
 <!-- Sub Header -->
-<div class="container">
+<div class="container m-top-1">
     <div class="row">
         @if (session()->has('success_message'))
         <div class="alert alert-primary animate-in" data-anim-delay="300" data-anim-type="fade-in-down">
@@ -25,8 +25,7 @@
 </div>
 <div class="container">
     <div class="col-12">
-        <h2>Produk Reksadana Anda</h2>
-        <nav class="text-right" aria-label="breadcrumb" role="navigation">
+        <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="/">Beranda</a>
@@ -34,6 +33,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Jual</li>
             </ol>
         </nav>
+        <h2>Produk Reksadana Anda</h2>
     </div>
 </div>
 <!-- Sub Header -->

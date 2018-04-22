@@ -2,7 +2,7 @@
     <div class="col-12">
         <div class="d-flex flex-wrap">
         <div class="text-center">
-            <h5>Nab {{$product->name}}</h5>
+            <h5>YTD {{$product->name}}</h5>
         </div>
         </div>
     </div>
@@ -13,17 +13,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 <script>
 var ctx = document.getElementById("myChart").getContext('2d');
+var dData = function() {
+  return Math.round(Math.random() * 10);
+};
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ["January", "February", "March", "April", "May", "June", "July" , "August",
         "September", "October", "November", "Desember"],
         datasets: [{
-            label: 'nab',
+            label: 'YTD',
             fill: false,
             backgroundColor: '#26A69A',
             borderColor: '#26A69A',
-            data: [1,2,3,4,5,3,1,2,6,5,3,4],
+            data: [dData(),dData(),dData(),dData(),dData(),dData(),dData(),dData(),dData(),dData(),dData(),dData()],
         }]
     },
     options: {

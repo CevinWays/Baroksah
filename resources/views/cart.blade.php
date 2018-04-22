@@ -26,8 +26,7 @@
 </div>
 <div class="container">
     <div class="col-12">
-        <h2>Cart</h2>
-        <nav class="text-right" aria-label="breadcrumb" role="navigation">
+        <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="/">Beranda</a>
@@ -35,6 +34,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Cart</li>
             </ol>
         </nav>
+        <h2>Cart</h2>
     </div>
 </div>
 <!-- Sub Header -->

@@ -145,11 +145,12 @@
           <div class="col-img-hover" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white" >
             <div class="img-hover-st-4">
               <div class="text">
-                <a class="btn btn-sm btn-outline-primary" style="color: white" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a>
+                <a class="btn btn-md btn-outline-primary" style="color: white" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a>
                 <br>
                 <h3 class="uppercase">{{$product->slug}}</h3>
                 <p>{{$product->name}}</p>
                 <p>YTD : {{$product->ytd}}</p>
+                <p>Rating : {{$product->rating}}</p>
               </div>
               <div class="imgbox img-responsive">
                 <img src="{{asset('storage/'.$product->image)}}" alt="Card images" class="img-responsive">

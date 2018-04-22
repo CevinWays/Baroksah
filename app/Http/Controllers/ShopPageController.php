@@ -9,7 +9,7 @@ class ShopPageController extends Controller
 {
     public function index()
     {
-        $pagination = 12;
+        $pagination = 18;
         $categories = Category::all();
 
         if (request()->category) {

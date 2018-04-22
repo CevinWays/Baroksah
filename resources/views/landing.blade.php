@@ -58,7 +58,7 @@
 <div class="section-lg nopadd m-top-10">
   <div class="col-md-12 text-center">
     <div class="m-bot-6">
-      <h1 class="f-35 font-bold uppercase">TOP Best Seller</h1>
+      <h1 class="f-35 font-bold uppercase">TOP Best Reksadana</h1>
       <div class="hr-line blue-color m-bot-2"></div>
       <p>6 produk reksadana terbaik dari baroksah</p>
     </div>
@@ -70,11 +70,12 @@
         <div class="col-img-hover" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white" >
           <div class="img-hover-st-4">
             <div class="text">
-              <a class="btn btn-sm btn-outline-primary" style="color: white" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a>
+              <a class="btn btn-md btn-outline-primary" style="color: white" href="{{route('shop.show',$product->slug)}}">{{$product->presentPrice()}}</a>
               <br>
               <h3 class="uppercase">{{$product->slug}}</h3>
               <p>{{$product->name}}</p>
               <p>YTD : {{$product->ytd}}</p>
+              <p>Rating : {{$product->rating}}</p>
             </div>
             <div class="imgbox img-responsive">
               <img src="{{asset('storage/'.$product->image)}}" alt="Card images" class="img-responsive">
