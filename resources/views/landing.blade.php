@@ -91,6 +91,19 @@
       <i class="fa fa-angle-right" aria-hidden="true"></i> Lebih Banyak</a>
   </div>
 </div>
+
+<div class="section-lg noppad m-top-2 text-center">
+  <div class="col-md-4">
+    <img src="images/reksadana_icon.png" alt="" style="width: 200px; height: 80px">
+  </div>
+  <div class="col-md-4">
+    <img src="images/inklusi.png" alt="" style="width: 200px; height: 90px">
+  </div>
+  <div class="col-md-4">
+    <img src="images/otoritas.png" alt="" style="width: 200px; height: 90px">
+  </div>
+</div>
+
 <!-- end features Section -->
 <div class="clearfix"></div>
 <div class="section-lg m-top-8 bg-parallax sty-two">
