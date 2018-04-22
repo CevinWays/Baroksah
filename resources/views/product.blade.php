@@ -65,7 +65,7 @@
 <div class="section-md">
     <div class="container m-top-1">
         <div class="row">
-            <div class="col-sm-12 m-bot-4">
+            <div class="col-sm-12 m-bot-2">
                 <div class="card" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white" >
                     <div class="row">
                         <div class="col-md-2 m-top-1" style="margin-left: 10px">
@@ -87,6 +87,17 @@
                                 <button type="submit" class="btn btn-primary">Tambah ke Cart</button>
                             </form>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 m-bot-2">
+                <div class="card" style="box-shadow: 0 5px 9px 0 #BDBDBD; border-color: white">
+                    <div class="card-body">
+                        <h5>Deskripsi {{$product->name}}</h5>
+                        <p>{{$product->deskripsi}}</p>
                     </div>
                 </div>
             </div>
