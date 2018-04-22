@@ -118,6 +118,9 @@ class CheckoutPageController extends Controller
     private function getNumbers(){
         $tax = config('cart.tax')/100;
         $discount = session()->get('coupon')['discount']??0;
+        if ($newSubtotal < 0) {
+            $newSubtotal = 0;
+        }
         $code = session()->get('coupon')['name'] ?? null;
         $newSubtotal=(Cart::subtotal() - $discount);
         $newTax = $newSubtotal * $tax;
