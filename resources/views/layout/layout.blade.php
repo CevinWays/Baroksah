@@ -36,6 +36,8 @@
 <!-- forms -->
 <link rel="stylesheet" href="{{URL::asset('js/form/css/sky-forms.css')}}" type="text/css" media="all">
 
+@yield('extra-css-star')
+
 {{-- extra css Stripe --}}
 @yield('extra-css')
 
@@ -103,8 +105,8 @@
                       <li class="right"> <a href="{{route('tentang.index')}}" class="m-link">Tentang</a> <span class="arrow"></span></li>
                       <a href="{{route('cart.index')}}">
                         <li class="right" style="top: 18px">
-                            {{-- <span class="fa-stack fa-lg has-badge" data-count="{{ Cart::instance('default')->count() }}"> --}}
-                            <span class="fa-stack fa-lg has-badge">
+                            <span class="fa-stack fa-lg has-badge" data-count="{{ Cart::instance('default')->count() }}">
+                            {{-- <span class="fa-stack fa-lg has-badge"> --}}
                               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                             </span>
                         </li>
@@ -251,6 +253,7 @@
 {{-- <script type="text/javascript" src="{{URL::asset('js/chartjs/chart.min.js')}}"></script> 
 <script type="text/javascript" src="{{URL::asset('js/chartjs/chart-int.js')}}"></script> --}}
 
+@yield('extra-js-star')
 
 @yield('extra-js')
 

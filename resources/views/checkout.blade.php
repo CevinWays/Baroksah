@@ -45,7 +45,7 @@
       <div class="col-md-6">
         <h2 class="uppercase">Billing Details</h2>
 
-        <form action="{{route('checkout.store','jual.store')}}" method="POST" id="payment-form" class="sky-form sty-one" sty-one>
+        <form action="{{route('checkout.store')}}" method="POST" id="payment-form" class="sky-form sty-one" sty-one>
           {{ csrf_field() }}
           <fieldset class="sty-one">
             <div class="row">
@@ -264,6 +264,15 @@
           </div>
         </div>
         @endif
+        <div class="row m-top-4">
+          <div class="col-md-6">
+            <div class="m-bot-1">Metode Pembayaran :</div>
+            <img src="{{URL::asset('images/mastercard.png')}}" alt="pay_card" style="width: 60px; height: 40px">
+            <img src="{{URL::asset('images/visa.png')}}" alt="pay_card" style="width: 60px; height: 40px">
+            <img src="{{URL::asset('images/america.png')}}" alt="pay_card" style="width: 60px; height: 40px">
+            <img src="{{URL::asset('images/discover.png')}}" alt="pay_card" style="width: 60px; height: 40px">
+          </div>
+        </div>
       </div>
     </div>
   </div>
