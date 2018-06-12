@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c9f0595f272c985a9824dcaa152cdd2",
+    "content-hash": "040bd4079be72561110bc883e3206383",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -3744,16 +3744,16 @@
         },
         {
             "name": "tcg/voyager",
-            "version": "dev-1.x-dev",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-control-group/voyager.git",
-                "reference": "257108d424779f936922d08c62ef534c0a100f88"
+                "reference": "9d4b296eb1eba22a794deca093215d1ce29cdf6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/257108d424779f936922d08c62ef534c0a100f88",
-                "reference": "257108d424779f936922d08c62ef534c0a100f88",
+                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/9d4b296eb1eba22a794deca093215d1ce29cdf6d",
+                "reference": "9d4b296eb1eba22a794deca093215d1ce29cdf6d",
                 "shasum": ""
             },
             "require": {
@@ -3807,7 +3807,7 @@
                 "laravel",
                 "panel"
             ],
-            "time": "2018-04-17T21:37:55+00:00"
+            "time": "2018-05-30T16:06:07+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5759,9 +5759,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "tcg/voyager": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
